@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Aprenda a construir seu primeiro documento HTML">
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="./../fav.ico/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="./../fav.ico/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./../fav.ico/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./../fav.ico/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="./../fav.ico/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="./../fav.ico/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="./../fav.ico/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="./../fav.ico/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./../fav.ico/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="./../fav.ico/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./../fav.ico/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="./../fav.ico/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./../fav.ico/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./../fav.ico/manifest.json" />
+        <link
+            rel="stylesheet"
+            type="text.css"
+            href="./../fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css"
+        />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="./../fav.ico/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+        <title>HTML - Introduçãoo</title>
+        <style type="text/css">
+            body {
+                background-color: blueviolet;
+                color: white;
+                margin: 0;
+                padding: 0;
+                font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+                max-width: 100%;
+            }
+
+            .section-header {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding-top: 10px;
+                width: 100%;
+                height: 125px;
+                border-bottom: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block {
+                background-color: rgba(6, 17, 121, 0.753);
+                position: relative;
+                margin: 0 auto;
+                width: 850px;
+                height: auto;
+                border-radius: 15px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block1 {
+                position: relative;
+                margin: 0 auto;
+                width: 850px;
+                height: auto;
+                max-width: 100%;
+            }
+
+            .section-block2 {
+                background-image: url("./img/fundo.jpg");
+                position: relative;
+                margin: 0 auto;
+                width: 1050px;
+                height: auto;
+                color: #fff;
+                border-radius: 15px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block3 {
+                background-image: url("./img/fundo.jpg");
+                position: relative;
+                margin: 0 auto;
+                width: 850px;
+                height: auto;
+                border-radius: 15px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-footer {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding-bottom: 20px;
+                width: 100%;
+                height: 135px;
+                border-top: solid 2px #fff;
+                text-align: center;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            .container-carros {
+                position: relative;
+                padding: 15px;
+                max-width: 640px;
+                margin: 0 auto;
+            }
+
+            .gallery-wrapper {
+                overflow-x: auto;
+            }
+
+            .arrow-left,
+            .arrow-right {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: auto;
+                bottom: 0;
+                font-size: 20px;
+                line-height: 250px;
+                width: 40px;
+                color: #fff;
+                transition: all 600ms ease-in-out;
+                background: linear-gradient(
+                    to left,
+                    transparent 0%,
+                    black 200%
+                );
+                opacity: 0.1;
+                cursor: pointer;
+                border: none;
+            }
+
+            .arrow-left:hover,
+            .arrow-right:hover {
+                opacity: 1;
+            }
+
+            .arrow-right {
+                right: 0;
+                left: auto;
+                text-align: right;
+                background: linear-gradient(
+                    to right,
+                    transparent 0%,
+                    black 200%
+                );
+            }
+
+            .gallery {
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 15px;
+            }
+
+            .item {
+                width: 638px;
+                height: 350px;
+                flex-shrink: 0;
+                transition: all 600ms ease-in-out;
+                opacity: 0.5;
+            }
+
+            .current-item {
+                opacity: 1;
+            }
+
+            h1,
+            h2,
+            h3 {
+                text-align: center;
+                font-weight: 100;
+                line-height: normal;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                max-width: 100%;
+            }
+
+            h4,
+            h5,
+            h6 {
+                text-align: left;
+                text-decoration: none;
+                font-weight: bold;
+                line-height: normal;
+                margin-left: 25px;
+                max-width: 100%;
+            }
+
+            .texto-destaque-top {
+                font-weight: bold;
+                font-size: 18px;
+                color: rgb(255, 174, 0);
+                text-decoration: underline;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-titulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(4, 83, 119, 0.74);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-rotulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-center {
+                font-weight: 400;
+                font-size: 14px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .texto-destaque-subtitulo {
+                color: rgb(12, 12, 12);
+            }
+
+            .texto-destaque-texto {
+                color: rgb(12, 11, 11);
+            }
+
+            p {
+                margin-left: 25px;
+                margin-right: 25px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                max-width: 100%;
+            }
+
+            a {
+                color: rgb(251, 251, 253);
+                font-size: medium;
+                max-width: 100%;
+            }
+
+            i {
+                font-size: 30px;
+                color: rgb(98, 111, 189);
+                max-width: 100%;
+            }
+
+
+            ol {
+                position: relative;
+                margin: 0 auto;
+                background-color: #fff;
+                padding-top: 10px;
+                padding-bottom: 5px;
+                width: 650px;
+                max-width: 100%;
+            }
+
+            li {
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                max-width: 100%;
+                color: rgb(235, 97, 34);
+                font-style: italic;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="section-header">
+            <h5>Você está em</h5>
+            <h5 class="texto-destaque-top">
+              Carreira Programador Front-end
+              »
+              2ª Missão
+              »
+              Introdução
+            </h5>
+            <br />
+        </div>
+        <br />
+        <div class="section-block1">
+            <h1>1. Introdução à HTML</h1>
+        </div>
+        <div class="section-block2"><br>
+            <p>Neste vídeo entenderemos o que é a HTML (Hypertext Markup Language), sua estrutura e qual é seu objetivo no contexto do desenvolvimento de software.</p>
+            <center>
+                <iframe width="671" height="421" src="/2ª Missão/video/viewaula1.mp4" title="O que é HTML?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </center><br>
+        </div><br>
+        <div class="section-block1">
+            <h1>Consulta rápida</h1>
+
+            <p>A HTML é utilizada para estruturar todo o conteúdo da página, definindo elementos como parágrafos, títulos, imagens, etc. Sendo assim, essa linguagem é utilizada na construção de qualquer página web e, portanto, deve ser conhecida por todo programador que trabalha com esse tipo de aplicação.</p>
+        </div>
+        
+        
+
+        <div class="section-footer">
+            <h5 class="texto-destaque-center">
+                Envie seu Feed Back, com criticas e sugestões.
+            </h5>
+            <h5 class="texto-destaque-center">
+                Eu sou Luciano Camargo e estou iniciando minha Carreira de
+                Programador Front-End!
+            </h5>
+            <p>
+                <a href="mailto:carreiradev.frontend.lc@gmail.com">
+                    <i class="fa-regular fa-envelope"></i>
+                    CarreiraDev.FrontEnd.LC</a
+                >
+                <i class="fa-solid fa-mobile-screen"></i>
+                <a href="tel:+5521994629516">(21) 99462-9516</a>
+            </p>
+        </div>
+        <script
+            src="https://kit.fontawesome.com/2930c18a2d.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
