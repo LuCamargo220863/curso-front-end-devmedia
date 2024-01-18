@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="shortcut icon"
+            href="./../global/fav.ico/favicon-96x96.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="./../../../fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css"
+        />
+        <title>Document</title>
+        <style>
+            body {
+                background-color: blueviolet;
+                color: white;
+                margin: 0;
+                padding: 0;
+                font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+                max-width: 100%;
+            }
+
+            .section-header {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding-top: 10px;
+                width: 100%;
+                height: 125px;
+                border-bottom: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block {
+                background-color: rgba(6, 17, 121, 0.753);
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                height: auto;
+                border-radius: 15px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block1 {
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                height: auto;
+                max-width: 100%;
+            }
+
+            .section-block2 {
+                background-image: url("./../../img/fundo.jpg");
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                height: auto;
+                color: #fff;
+                border-radius: 15px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block3 {
+                background-image: url("./../../img/fundo.jpg");
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                height: auto;
+                border-radius: 15px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-footer {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding-bottom: 20px;
+                width: 100%;
+                height: 135px;
+                border-top: solid 2px #fff;
+                text-align: center;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            .container-carros {
+                position: relative;
+                padding: 15px;
+                max-width: 650px;
+                margin: 0 auto;
+            }
+
+            .gallery-wrapper {
+                overflow-x: auto;
+            }
+
+            .arrow-left,
+            .arrow-right {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: auto;
+                bottom: 0;
+                font-size: 20px;
+                line-height: 350px;
+                width: 40px;
+                color: #fff;
+                transition: all 600ms ease-in-out;
+                background: linear-gradient(
+                    to left,
+                    transparent 0%,
+                    black 200%
+                );
+                opacity: 0.1;
+                cursor: pointer;
+                border: none;
+            }
+
+            .arrow-left:hover,
+            .arrow-right:hover {
+                opacity: 1;
+            }
+
+            .arrow-right {
+                right: 0;
+                left: auto;
+                text-align: right;
+                background: linear-gradient(
+                    to right,
+                    transparent 0%,
+                    black 200%
+                );
+            }
+
+            .gallery {
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 15px;
+            }
+
+            .item {
+                width: 650px;
+                height: 350px;
+                flex-shrink: 0;
+                transition: all 600ms ease-in-out;
+                opacity: 0.5;
+            }
+
+            .current-item {
+                opacity: 1;
+            }
+
+            h1,
+            h2,
+            h3 {
+                text-align: center;
+                font-weight: 100;
+                line-height: normal;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                max-width: 100%;
+            }
+
+            h4,
+            h5,
+            h6 {
+                text-align: left;
+                text-decoration: none;
+                font-weight: bold;
+                line-height: normal;
+                margin-left: 25px;
+                max-width: 100%;
+            }
+
+            .texto-destaque-top {
+                font-weight: bold;
+                font-size: 18px;
+                color: rgb(255, 174, 0);
+                text-decoration: underline;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-html-texto {
+                font-weight: bold;
+                font-size: 18px;
+                color: rgb(60, 255, 0);
+                text-decoration: underline;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-titulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(4, 83, 119, 0.74);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-rotulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-center {
+                font-weight: 400;
+                font-size: 14px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .texto-destaque-subtitulo {
+                color: rgb(12, 12, 12);
+            }
+
+            .texto-destaque-destaque {
+                color: rgb(153, 4, 4);
+                background-color: black;
+            }
+
+            .texto-destaque-texto {
+                color: rgb(12, 11, 11);
+            }
+
+            p {
+                margin-left: 25px;
+                margin-right: 25px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                max-width: 100%;
+            }
+
+            a {
+                color: rgb(251, 251, 253);
+                font-size: medium;
+                max-width: 100%;
+            }
+
+            i {
+                font-size: 30px;
+                color: rgb(98, 111, 189);
+                max-width: 100%;
+            }
+
+            ol {
+                position: relative;
+                margin: 0 auto;
+                background-color: #fff;
+                padding-top: 10px;
+                padding-bottom: 5px;
+                width: 650px;
+                max-width: 100%;
+            }
+
+            li {
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                max-width: 100%;
+                color: rgb(235, 97, 34);
+                font-style: italic;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="section-header">
+            <h5>Você está em</h5>
+            <h4>Carreira Programador Front-end » 2ª Missão » Introdução</h4>
+        </div>
+        <div class="section-block">
+            <h1>3. O que é o HTML?</h1>
+            <p>
+                HTML (Hyper Text Markup Language) é a linguagem que usamos para
+                estruturar as páginas web de um site.
+            </p>
+            <div class="section-block2">
+                <br />
+                <div class="container">
+                    <button
+                        class="arrow-left control"
+                        aria-label="Previous image"
+                    >
+                        ◀
+                    </button>
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery-wrapper">
+                        <div class="gallery">
+                            <!--       <div class="item current-item cyan"></div>
+                    <div class="item deeppink"></div>
+                    <div class="item turquoise"></div>
+                    <div class="item darkblue"></div>
+                    <div class="item purple"></div> -->
+                            <img
+                                src="./../3 O que é o HTML/img/slide2.png"
+                                width="650"
+                                height="350"
+                                alt="slide2"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./../3 O que é o HTML/img/slide3.png"
+                                width="650"
+                                height="350"
+                                alt="slide2"
+                                class="item current-item"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <br />
+            <div class="section-block">
+                <p>
+                    Escrevemos código HTML utilizando tags, como
+                    <span class="texto-destaque-html-texto"
+                        >&lt;h1&gt;&lt;/h1&gt;</span
+                    >
+                    ou
+                    <span class="texto-destaque-html-texto"
+                        >&lt;p&gt;&lt;/p&gt;</span
+                    >, e dentro delas adicionamos o conteúdo que desejamos que o
+                    navegador exiba para quem estiver acessando a página web.
+                </p>
+            </div>
+        </div>
+        <div class="section-block2"><br>
+            <blockquote>
+                O papel das tags é estruturar a informação contida em uma página web, descrevendo para o navegador o que é um texto, um título, um botão, etc.O papel das tags é estruturar a informação contida em uma página web, descrevendo para o navegador o que é um texto, um título, um botão, etc.
+            </blockquote><br></div>
+           <div class="section-block2">
+            <p>O texto entre os símbolos menor que <i class="fa-solid fa-circle-chevron-left"></i> e maior que <i class="fa-solid fa-circle-chevron-right"></i> é chamado elemento e grande parte deles será composto por duas tags: uma de abertura e uma de fechamento. As tags de fechamento possuem uma barra após o símbolo menor que.</p>
+           <center> <img src="./../3 O que é o HTML/img/Capturavisualbasic6.png" alt="Capturavisualbasic6"></center>
+           <p>O navegador não mostra as tags de um elemento, mas sim a informação contida entre as suas tags de abertura e fechamento.</p><br>
+           </div>
+        </div>
+        <h2>E assim finalizamos tópico <span class="texto-destaque-destaque">3. O que é o HTML?</span> </h2>
+        <center>
+            <img src="./../3 O que é o HTML/img/Capturavisualbasic7.png" alt="Capturavisualbasic7">
+        </center>
+
+        <script
+            src="https://kit.fontawesome.com/2930c18a2d.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
