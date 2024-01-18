@@ -39,7 +39,7 @@ body {
 }
 
 .section-block2 {
-    background-image: url("./../../img/fundo.jpg");
+    background-image: url("./../global/img/fundo.jpg");
     position: relative;
     margin: 0 auto;
     width: 1050px;
@@ -51,7 +51,7 @@ body {
 }
 
 .section-block3 {
-    background-image: url("./../../img/fundo.jpg");
+    background-image: url("./../global/img/fundo.jpgg");
     position: relative;
     margin: 0 auto;
     width: 850px;
