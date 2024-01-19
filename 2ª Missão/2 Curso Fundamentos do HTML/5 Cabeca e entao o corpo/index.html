@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="shortcut icon"
+            href="./../global/fav.ico/favicon-96x96.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="./../../../fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css"
+        />
+        <title>5. Cabeça e, então, o corpo</title>
+        <style>
+            body {
+                background-color: blueviolet;
+                color: white;
+                margin: 0;
+                padding: 0;
+                font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+                max-width: 100%;
+            }
+
+            .section-header {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding-top: 10px;
+                width: 100%;
+                height: 125px;
+                border-bottom: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block {
+                background-color: rgba(6, 17, 121, 0.753);
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                height: auto;
+                border-radius: 15px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block1 {
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                height: auto;
+                max-width: 100%;
+            }
+
+            .section-block2 {
+                background-image: url("./../../img/fundo.jpg");
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                height: auto;
+                color: #fff;
+                border-radius: 15px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block3 {
+                background-image: url("./../../img/fundo.jpg");
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                height: auto;
+                border-radius: 15px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block-html {
+                background-color: #000;
+                position: relative;
+                margin: 0 auto;
+                width: 609px;
+                height: auto;
+                border-radius: 5px;
+                padding-bottom: 10px;
+                max-width: 100%;
+            }
+
+            .section-footer {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding-bottom: 20px;
+                width: 100%;
+                height: 135px;
+                border-top: solid 2px #fff;
+                text-align: center;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            .container-carros {
+                position: relative;
+                padding: 15px;
+                max-width: 650px;
+                margin: 0 auto;
+            }
+
+            .gallery-wrapper {
+                overflow-x: auto;
+            }
+
+            .arrow-left,
+            .arrow-right {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: auto;
+                bottom: 0;
+                font-size: 20px;
+                line-height: 350px;
+                width: 40px;
+                color: #fff;
+                transition: all 600ms ease-in-out;
+                background: linear-gradient(
+                    to left,
+                    transparent 0%,
+                    black 200%
+                );
+                opacity: 0.1;
+                cursor: pointer;
+                border: none;
+            }
+
+            .arrow-left:hover,
+            .arrow-right:hover {
+                opacity: 1;
+            }
+
+            .arrow-right {
+                right: 0;
+                left: auto;
+                text-align: right;
+                background: linear-gradient(
+                    to right,
+                    transparent 0%,
+                    black 200%
+                );
+            }
+
+            .gallery {
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 15px;
+            }
+
+            .item {
+                width: 650px;
+                height: 350px;
+                flex-shrink: 0;
+                transition: all 600ms ease-in-out;
+                opacity: 0.5;
+            }
+
+            .current-item {
+                opacity: 1;
+            }
+
+            h1,
+            h2,
+            h3 {
+                text-align: center;
+                font-weight: 100;
+                line-height: normal;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                max-width: 100%;
+            }
+
+            h4,
+            h5,
+            h6 {
+                text-align: left;
+                text-decoration: none;
+                font-weight: bold;
+                line-height: normal;
+                margin-left: 25px;
+                max-width: 100%;
+            }
+
+            .texto-destaque-top {
+                font-weight: bold;
+                font-size: 18px;
+                color: rgb(255, 174, 0);
+                text-decoration: underline;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-html-texto {
+              font-family: 'Courier New', Courier, monospace;
+                font-size: 16px;
+                color: rgb(60, 255, 0);
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto1 {
+              font-family: 'Courier New', Courier, monospace;
+                font-size: 16px;
+                color: rgb(255, 174, 0);
+                margin-left: 65px;
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto2 {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 16px;
+                color: rgb(0, 81, 255);
+                margin-left: 60px;
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto3 {
+              font-family: 'Courier New', Courier, monospace;
+                font-size: 16px;
+                color: rgb(60, 255, 0);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-titulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(4, 83, 119, 0.74);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-rotulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-center {
+                font-weight: 400;
+                font-size: 14px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .texto-destaque-subtitulo {
+                color: rgb(12, 12, 12);
+            }
+
+            .texto-destaque-destaque {
+                color: rgb(153, 4, 4);
+                background-color: black;
+            }
+
+            .texto-destaque-texto {
+                color: rgb(12, 11, 11);
+            }
+
+            p {
+                margin-left: 25px;
+                margin-right: 25px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                max-width: 100%;
+            }
+
+            a {
+                color: rgb(251, 251, 253);
+                font-size: medium;
+                max-width: 100%;
+            }
+
+            i {
+                font-size: 30px;
+                color: rgb(98, 111, 189);
+                max-width: 100%;
+            }
+
+            ol {
+                position: relative;
+                margin: 0 auto;
+                background-color: #fff;
+                padding-top: 10px;
+                padding-bottom: 5px;
+                width: 650px;
+                max-width: 100%;
+            }
+
+            li {
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                max-width: 100%;
+                color: rgb(235, 97, 34);
+                font-style: italic;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="section-header">
+            <h5>Você está em</h5>
+            <h4>Carreira Programador Front-end » 2ª Missão » Introdução</h4>
+        </div>
+        <div class="section-block">
+            <h1>5. Cabeça e, então, o corpos</h1>
+            <p>
+                Escrevemos o HTML em um arquivo com a extensão .html, comumente
+                chamado documento HTML. Esse documento, quando corretamente lido
+                pelo navegador dá origem uma página web, com a qual o usuário
+                pode interagir.
+            </p>
+            <h3>Por dentro da estrutura do HTML</h3>
+            <p>
+                Uma vez que o documento será lido e interpretado pelo navegador,
+                devemos escrevê-los observando certas regras. Vejamos um exemplo
+                de documento para conhecê-las.
+            </p>
+        </div><br>
+
+        <div class="section-block2"><br>
+          <h4>Abaixo temos a codificação completa do arquivo</h4>
+          <div class="section-block-html">
+            <p class="texto-destaque-html-texto">&lt;!DOCTYPE html&gt;</p>
+<p class="texto-destaque-html-texto">&lt;html&gt;</p>
+    <p class="texto-destaque-html-texto1">&lt;head&gt;</p>
+        <p class="texto-destaque-html-texto1">&lt;meta charset=&quot;utf-8&quot;&gt;</p>
+        <p><span class="texto-destaque-html-texto2">&lt;title&gt;</span><span class="texto-destaque-destaque">Chapeuzinho Vermelho - Conto dos irmãos Grimm</span><span class="texto-destaque-html-texto2">&lt;/title&gt;</span></p>
+   <p class="texto-destaque-html-texto"> &lt;/head&gt;</p>
+    <p class="texto-destaque-html-texto">&lt;body&gt;</p>
+        <p class="texto-destaque-html-texto">&lt;h1&gt;Chapeuzinho Vermelho&lt;/h1&gt;</p>
+
+        &lt;p&gt;Houve, uma vez uma graciosa menina; quem a via ficava logo gostando dela, 
+        assim como ela gostava de todos; particularmente, amava a avozinha, 
+        que não sabia o que dar e o que fazer pela netinha. 
+        Certa vez, presenteou-a com um chapeuzinho de veludo vermelho e, 
+        porque lhe ficava muito bem, a menina não mais quis usar outro e acabou 
+        ficando com o apelido de Chapeuzinho Vermelho. Um dia, <br> a mãe chamou-a e disse-lhe:&lt;/p&gt;
+
+        &lt;blockquote&gt;- Vem cá, Chapeuzinho Vermelho; aqui tens um pedaço de bolo e 
+        uma garrafa de vinho; leva tudo para a vovó; ela está doente e fraca e 
+        com isso se restabelecerá. Põe-te a caminho antes que o sol esquente muito e, 
+        quando fores, comporta-te direito; não saias do caminho, 
+        senão cais e quebras a garrafa e a vovó ficará sem nada. 
+        Quando entrares em seu quarto, não esqueças de dizer &quot;bom-dia, vovó,&quot; 
+        ao invés de mexericar pelos cantos.&lt;/blockquote&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre><br>
+              <div class="tCont result " id="result">
+              </div>
+        </div>
+    </div>
+
+        </div><br>
+           <div class="section-block2">
+                <br />
+                <div class="container">
+                    <button
+                        class="arrow-left control"
+                        aria-label="Previous image"
+                    >
+                        ◀
+                    </button>
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery-wrapper">
+                        <div class="gallery">
+                            <!--       <div class="item current-item cyan"></div>
+                    <div class="item deeppink"></div>
+                    <div class="item turquoise"></div>
+                    <div class="item darkblue"></div>
+                    <div class="item purple"></div> -->
+                            <img
+                                src="./../4 Uma linguagem de tags e atributos/img/Imagem4.2.png"
+                                width="600"
+                                height="300"
+                                alt="slide2"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./../4 Uma linguagem de tags e atributos/img/Image2.png"
+                                width="600"
+                                height="300"
+                                alt="slide2"
+                                class="item current-item"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <br />
+            <div class="section-block">
+                <p>
+                    Existem diversos atributos com diferentes nomes e valores.
+                    Certos atributos podem estar disponíveis apenas para alguns
+                    elementos.
+                </p>
+                <p>
+                    Mas vamos com calma 🧠 É mais importante entender como o
+                    HTML funciona primeiro do que memorizar todas as tags e
+                    atributos que existem.
+                </p>
+            </div>
+        </div>
+        <div class="section-block2">
+            <br />
+            <blockquote>
+                Uma página web é um documento de texto escrito com a linguagem
+                HTML
+            </blockquote>
+            <br />
+        </div>
+        <br />
+        <div class="section-block2">
+            <br />
+            <center>
+                <img
+                    src="./../4 Uma linguagem de tags e atributos/img/Imagem5.png"
+                    width="450"
+                    alt="Imagem5"
+                />
+            </center>
+        </div>
+        <h2>
+            E assim finalizamos tópico
+            <span class="texto-destaque-destaque"
+                >4. Uma linguagem de tags e atributo</span
+            >
+        </h2>
+        <center>
+            <img
+                src="./../4 Uma linguagem de tags e atributos/img/Imagem6.png"
+                alt="Imagem5"
+            />
+        </center>
+        <br />
+        <script
+            src="https://kit.fontawesome.com/2930c18a2d.js"
+            crossorigin="anonymous"
+        ></script>
+        <div class="section-footer">
+            <h5 class="texto-destaque-center">
+                Envie seu Feed Back, com criticas e sugestões.
+            </h5>
+            <h5 class="texto-destaque-center">
+                Eu sou Luciano Camargo e estou iniciando minha Carreira de
+                Programador Front-End!
+            </h5>
+            <p>
+                <a href="mailto:carreiradev.frontend.lc@gmail.com">
+                    <i class="fa-regular fa-envelope"></i>
+                    CarreiraDev.FrontEnd.LC</a
+                >
+                <i class="fa-solid fa-mobile-screen"></i>
+                <a href="tel:+5521994629516">(21) 99462-9516</a>
+            </p>
+        </div>
+    </body>
+</html>
