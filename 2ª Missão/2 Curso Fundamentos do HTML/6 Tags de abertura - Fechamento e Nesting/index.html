@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="shortcut icon"
+            href="./../global/fav.ico/favicon-96x96.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="./../../../fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css"
+        />
+        <title>6. Tags de abertura, fechamento e nesting</title>
+        <style>
+            body {
+                background-color: blueviolet;
+                color: white;
+                margin: 0;
+                padding: 0;
+                font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+                max-width: 100%;
+            }
+
+            .section-header {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding-top: 10px;
+                width: 100%;
+                height: 125px;
+                border-bottom: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block {
+                background-color: rgba(6, 17, 121, 0.753);
+                position: relative;
+                margin: 0 auto;
+                width: 990px;
+                height: auto;
+                border-radius: 15px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block1 {
+                position: relative;
+                margin: 0 auto;
+                width: 990px;
+                height: auto;
+                max-width: 100%;
+            }
+
+            .section-block2 {
+                background-image: url("./../../img/fundo.jpg");
+                position: relative;
+                margin: 0 auto;
+                width: 890px;
+                height: auto;
+                color: #fff;
+                border-radius: 15px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block3 {
+                background-image: url("./../../img/fundo.jpg");
+                position: relative;
+                margin: 0 auto;
+                width: 990px;
+                height: auto;
+                border-radius: 15px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block-html {
+                background-color: #000;
+                position: relative;
+                margin: 0 auto;
+                width: 900px;
+                height: auto;
+                border-radius: 5px;
+                padding-bottom: 10px;
+                max-width: 100%;
+            }
+
+            .section-footer {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding-bottom: 20px;
+                width: 100%;
+                height: 135px;
+                border-top: solid 2px #fff;
+                text-align: center;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            .container-carros {
+                position: relative;
+                padding: 15px;
+                max-width: 650px;
+                margin: 0 auto;
+            }
+
+            .gallery-wrapper {
+                overflow-x: auto;
+            }
+
+            .arrow-left,
+            .arrow-right {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: auto;
+                bottom: 0;
+                font-size: 20px;
+                line-height: 350px;
+                width: 40px;
+                color: #fff;
+                transition: all 600ms ease-in-out;
+                background: linear-gradient(
+                    to left,
+                    transparent 0%,
+                    black 200%
+                );
+                opacity: 0.1;
+                cursor: pointer;
+                border: none;
+            }
+
+            .arrow-left:hover,
+            .arrow-right:hover {
+                opacity: 1;
+            }
+
+            .arrow-right {
+                right: 0;
+                left: auto;
+                text-align: right;
+                background: linear-gradient(
+                    to right,
+                    transparent 0%,
+                    black 200%
+                );
+            }
+
+            .gallery {
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 15px;
+            }
+
+            .item {
+                width: 650px;
+                height: 350px;
+                flex-shrink: 0;
+                transition: all 600ms ease-in-out;
+                opacity: 0.5;
+            }
+
+            .current-item {
+                opacity: 1;
+            }
+
+            h1,
+            h2,
+            h3 {
+                text-align: center;
+                font-weight: 100;
+                line-height: normal;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                max-width: 100%;
+            }
+
+            h4,
+            h5,
+            h6 {
+                text-align: left;
+                text-decoration: none;
+                font-weight: bold;
+                line-height: normal;
+                margin-left: 25px;
+                max-width: 100%;
+            }
+
+            .texto-destaque-top {
+                font-weight: bold;
+                font-size: 18px;
+                color: rgb(255, 174, 0);
+                text-decoration: underline;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-html-texto {
+              font-family: 'Courier New', Courier, monospace;
+                font-size: 16px;
+                color: rgb(60, 255, 0);
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto1 {
+              font-family: 'Courier New', Courier, monospace;
+                font-size: 16px;
+                color: rgb(255, 174, 0);
+                margin-left: 65px;
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto2 {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 16px;
+                color: rgb(0, 81, 255);
+                margin-left: 60px;
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto3 {
+              font-family: 'Courier New', Courier, monospace;
+                font-size: 16px;
+                color: rgb(60, 255, 0);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-titulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(4, 83, 119, 0.74);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-rotulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-rotulo1 {
+                font-weight: bold;
+                font-size: 18px;
+                color: rgba(214, 9, 221, 0.904);
+                text-decoration: underline;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-center {
+                font-weight: 400;
+                font-size: 14px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .texto-destaque-subtitulo {
+                color: rgb(12, 12, 12);
+                max-width: 100%;
+            }
+
+            .texto-destaque-destaque {
+                color: rgb(153, 4, 4);
+                background-color: black;
+                max-width: 100%;
+            }
+
+            .texto-destaque-texto {
+                color: rgb(12, 11, 11);
+                max-width: 100%;
+            }
+
+            .texto-destaque-texto-tag {
+                color: rgb(177, 78, 12);
+                font-weight: bold;
+                font-size: 23px;
+                max-width: 100%;
+            }
+
+            p {
+                margin-left: 25px;
+                margin-right: 25px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                max-width: 100%;
+            }
+
+            a {
+                color: rgb(251, 251, 253);
+                font-size: medium;
+                max-width: 100%;
+            }
+
+            i {
+                font-size: 30px;
+                color: rgb(98, 111, 189);
+                max-width: 100%;
+            }
+
+            ol ul {
+                position: relative;
+                margin: 0 auto;
+                background-color: #0a43be8c;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                width: 750px;
+                max-width: 100%;
+                color: blueviolet;
+            }
+
+            ul {
+                position: relative;
+                margin: 0 auto;
+                background-color: #0a43be8c;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                width: 680px;
+                max-width: 100%;
+                border-right: solid 2px #fff;
+                border-bottom-right-radius: 10px;
+            }
+
+            li {
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                max-width: 100%;
+                color: rgb(241, 233, 228);
+                font-style: italic;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="section-header">
+            <h5>Você está em</h5>
+            <h4>Carreira Programador Front-end » 2ª Missão » Introdução</h4>
+        </div>
+        <div class="section-block">
+            <h1>6. Tags de abertura, fechamento e nesting</h1>
+            <div class="section-block2">
+              <p>Vimos anteriormente que um elemento é um nome entre os sinais maior que <span class="texto-destaque-texto-tag">&gt;</span> e menor que <span class="texto-destaque-texto-tag">&lt;</span>. <br>Por exemplo, o elemento body se escreve <span class="texto-destaque-texto-tag">&lt;body&gt;</span> e o elemento p se escreve <span class="texto-destaque-texto-tag">&lt;p&gt;</span>.</p>
+<h3>Elementos escritos com pares de tags</h3>
+                <p>Alguns elementos se escrevem com pares de tags, sendo uma de abertura e a outra de fechamento.
+                  Esse é o tipo mais comum de tag utilizado.</p><br>
+                </div><br>
+        </div><br>
+        <div class="section-block2">
+          <h4>Ao escrever essas tags é necessário abrí-las e fechá-las, dessa forma:</h4>
+
+        
+        <div class="section-block-html">
+          <p class="texto-destaque-html-texto1">&lt;body&gt;</p>
+            <p class="texto-destaque-html-texto2">&lt;h1&gt;Chapeuzinho Vermelho&lt;/h1&gt;</p>
+            <p class="texto-destaque-html-texto2">&lt;p&gt;...</p>
+            <p class="texto-destaque-html-texto1">&lt;/body&gt;</p>
+        </div><br>
+      </div>
+
+
+        <div class="section-block2"><br>
+          <h3>Abaixo temos a codificação completa do arquivo</h3>
+          <h1>&#x1F447</h1>
+          <div class="section-block-html"><br>
+            <p class="texto-destaque-html-texto">&lt;!DOCTYPE html&gt;</p>
+<p class="texto-destaque-html-texto">&lt;html&gt;</p>
+    <p class="texto-destaque-html-texto1">&lt;head&gt;</p>
+        <p class="texto-destaque-html-texto1">&lt;meta charset=&quot;utf-8&quot;&gt;</p>
+        <p><span class="texto-destaque-html-texto2">&lt;title&gt;</span><span class="texto-destaque-destaque">Chapeuzinho Vermelho - Conto dos irmãos Grimm</span><span class="texto-destaque-html-texto2">&lt;/title&gt;</span></p>
+   <p class="texto-destaque-html-texto"> &lt;/head&gt;</p>
+    <p class="texto-destaque-html-texto">&lt;body&gt;</p>
+        <p class="texto-destaque-html-texto">&lt;h1&gt;Chapeuzinho Vermelho&lt;/h1&gt;</p>
+
+        <p><span class="texto-destaque-html-texto1">&lt;p&gt;</span>, uma vez uma graciosa menina; quem a via ficava logo gostando dela, 
+            assim como ela gostava de todos; particularmente, amava a avozinha, 
+            que não sabia o que dar e o que fazer pela netinha. 
+            Certa vez, presenteou-a com um chapeuzinho de veludo vermelho e, 
+            porque lhe ficava muito bem, a menina não mais quis usar outro e acabou 
+            ficando com o apelido de Chapeuzinho Vermelho. Um dia, <br> a mãe chamou-a e disse-lhe:<span class="texto-destaque-html-texto1">&lt;/p&gt;</span></p>
+
+        <p><span class="texto-destaque-html-texto1">&lt;blockquote&gt;</span>- Vem cá, Chapeuzinho Vermelho; aqui tens um pedaço de bolo e uma garrafa de vinho; leva tudo para a vovó; ela está doente e fraca e com isso se restabelecerá. Põe-te a caminho antes que o sol esquente muito e, quando fores, comporta-te direito; não saias do caminho, senão cais e quebras a garrafa e a vovó ficará sem nada. <br>Quando entrares em seu quarto, não esqueças de dizer <span class="texto-destaque-html-texto">&quot;</span>bom-dia, vovó,<span class="texto-destaque-html-texto">&quot;</span> 
+            ao invés de mexericar pelos cantos.<br><span class="texto-destaque-html-texto1">&lt;/blockquote&gt;</span></p>
+            <p class="texto-destaque-html-texto">&lt;/body&gt;</p>
+            <p class="texto-destaque-html-texto">&lt;/html&gt;</p>
+              </div>
+        </div>
+    
+    <div class="section-block1">
+        <h2>E agora temos logo abaixo o resultado da codificação acima para o usuário</h2>
+        <h1>&#x1F447</h1>
+        <div class="section-block2">
+            <h1>Chapeuzinho Vermelho</h1>
+            <p>Houve, uma vez uma graciosa menina; quem a via ficava logo gostando dela, 
+                assim como ela gostava de todos; particularmente, amava a avozinha, 
+                que não sabia o que dar e o que fazer pela netinha. 
+                Certa vez, presenteou-a com um chapeuzinho de veludo vermelho e, 
+                porque lhe ficava muito bem, a menina não mais quis usar outro e acabou 
+                ficando com o apelido de Chapeuzinho Vermelho. Um dia, <br> a mãe chamou-a e disse-lhe:</p>
+    
+            <blockquote>- Vem cá, Chapeuzinho Vermelho; aqui tens um pedaço de bolo e uma garrafa de vinho; leva tudo para a vovó; ela está doente e fraca e com isso se restabelecerá. Põe-te a caminho antes que o sol esquente muito e, quando fores, comporta-te direito; não saias do caminho, senão cais e quebras a garrafa e a vovó ficará sem nada. <br>Quando entrares em seu quarto, não esqueças de dizer &quot;bom-dia, vovó,&quot; ao invés de mexericar pelos cantos.</blockquote>
+
+        </div>
+
+    </div>
+
+        </div><br>
+           <div class="section-block2">
+            <h2>Explorando esse documento
+            </h2>
+            <ol>
+                <li>&gt;&gt;&gt;&gt;  DOCTYPE <br><br>
+                    <ul>
+                        <li><span class="texto-destaque-html-texto">DOCTYPE</span> é uma instrução sobre qual a versão do HTML que vai ser renderizada, nesse caso <span class="texto-destaque-html-texto">&lt;!DOCTYPE html</span> representa o <span class="texto-destaque-destaque">HTML versão 5</span>. Essa declaração deve ser a primeira linha do arquivo HTML.</li>
+                    </ul><br>
+                </li>
+                <li>&gt;&gt;&gt;&gt;  html  <br><br>
+                    <ul>
+                        <li>É dentro dessa tag que todas as demais serão escritas. A única coisa que pode ficar fora dessa tag é a declaração <span class="texto-destaque-html-texto">&lt;!DOCTYPE html</span>>.
+
+                            Um documento <span class="texto-destaque-destaque">HTML</span> deve ser escrito e estruturado em duas grandes seções: <span class="texto-destaque-rotulo1">head e body</span>.</li>
+                    </ul><br>
+                </li>
+                <li>&gt;&gt;&gt;&gt;  head<br><br>
+                    <ul>
+                        <li>É aqui que adicionamos tags com informações importantes sobre o documento, tais como o seu <span class="texto-destaque-rotulo1">título</span>, <span class="texto-destaque-rotulo1">descrição</span>, <span class="texto-destaque-rotulo1">codificação</span> <span class="texto-destaque-rotulo1">de</span> <span class="texto-destaque-rotulo1">caracteres</span>, entre outras.
+
+                            Nesse exemplo, utilizamos as <span class="texto-destaque-html-texto">tags meta e title</span>.</li>
+                    </ul><br>
+                </li>
+                <li>&gt;&gt;&gt;&gt;  meta<br><br>
+                    <ul>
+                        <li><span class="texto-destaque-destaque">Meta informa para o navegador</span> qual codificação de caracteres utilizamos quando o documento foi escrito, algo importante para que um "<span class="texto-destaque-rotulo1">�</span>" não apareça no lugar de outros caracteres, como letras acentuadas, por exemplo.</li> <br>
+                        <li><span class="texto-destaque-destaque">Na codificação de caracteres</span></span> você encontra no rodapé do seu editor de códigos, mas ela também depende do servidor onde a página web será hospedada, que geralmente vai usar UTF-8. <br><br><center><img src="./../5 Cabeca e entao o corpo/img/fig1.png" width="430" alt="fig1"></center></li>
+                        <li><center><img src="./../5 Cabeca e entao o corpo/img/fig3.png" width="125" alt="fig3" title="Observe no roda pé do editor que o modo UTF-8 está ativado ou habilitado"></center></li>
+                    </ul>
+                </li><br>
+                <li>&gt;&gt;&gt;&gt;  title<br><br>
+                    <ul>
+                        <li>Também adicionamos em head o título da página web, utilizando title. <center><img src="./../5 Cabeca e entao o corpo/img/fig4.png" alt="fig4" title="O nome do documento na aba do navegador"></center></li>
+                    </ul>
+                </li><br>
+                <li>&gt;&gt;&gt;&gt;  body<br><br>
+                    <ul>
+                        <li>É o corpo da página web, onde todo o conteúdo que será apresentado para o usuário. <br>
+
+                            Essa, com certeza, é a maior parte do documento. <br>
+                            
+                            Aqui usamos três elementos para estruturar o conteúdo da página web além do CSS3: h1, p, blockquote.</li>
+                    </ul>
+                </li><br>
+                <li>&gt;&gt;&gt;&gt;  Veja como ficou<br><br>
+                    <ul>
+                        <li><center><img src="./img/fig6.png" width="450" alt="fig6" title="A pagina indexada para a visualização do usuário"></center><br><a href="http://127.0.0.1:5500/2%C2%AA%20Miss%C3%A3o/2%20Curso%20Fundamentos%20do%20HTML/5%20Cabeca%20e%20entao%20o%20corpo/indexteste.html" target="_blank" rel="noopener noreferrer">link de acesso</a></li>
+                    </ul>
+                </li><br>
+                <li>&gt;&gt;&gt;&gt;  h1<br><br>
+                    <ul>
+                        <li>A maioria das páginas web terá um H1, que representa um título, geralmente escrito em letra maior. <span class="texto-destaque-rotulo1">Existem seis formas de criar um título no HTML, começando com H1 até H6</span>, o tamanho da letra vai ficando cada vez menor.</li>
+                    </ul>
+                </li><br>
+                <li>&gt;&gt;&gt;&gt;  p<br><br>
+                    <ul>
+                        <li>Um p é um parágrafo de um texto.</li>
+                    </ul>
+                </li><br>
+                <li>&gt;&gt;&gt;&gt;  blockquote<br><br>
+                    <ul>
+                        <li>É uma citação no texto. <br>
+
+                            Esse é apenas um exemplo de documento.<br>
+                            
+                            Na próxima aula conheceremos o nesting e saberemos o porquê de meta não ter tag de fechamento</li>
+                    </ul>
+                </li>
+            </ol>
+            <blockquote>- head contém informações importantes sobre o documento e body o conteúdo que será apresentado para o usuário.</blockquote>
+           </div>
+                <br />
+                <div class="section-block">
+                    <center><p><a href="https://www.devmedia.com.br/certificado/tecnologia/html/luciano-camargo-2" target="_blank" rel="noopener noreferrer">Certificado</a></p>
+                    
+                    <img src="./img/fig7.png" width="450" alt="fig7"></center>
+
+                </div>
+                
+        <br />
+        <script
+            src="https://kit.fontawesome.com/2930c18a2d.js"
+            crossorigin="anonymous"
+        ></script>
+        <div class="section-footer">
+            <h5 class="texto-destaque-center">
+                Envie seu Feed Back, com criticas e sugestões.
+            </h5>
+            <h5 class="texto-destaque-center">
+                Eu sou Luciano Camargo e estou iniciando minha Carreira de
+                Programador Front-End!
+            </h5>
+            <p>
+                <a href="mailto:carreiradev.frontend.lc@gmail.com">
+                    <i class="fa-regular fa-envelope"></i>
+                    CarreiraDev.FrontEnd.LC</a
+                >
+                <i class="fa-solid fa-mobile-screen"></i>
+                <a href="tel:+5521994629516">(21) 99462-9516</a>
+            </p>
+        </div>
+    </body>
+</html>
