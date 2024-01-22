@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="shortcut icon"
+            href="./../../../../fav.ico/favicon-96x96.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="./../../../../fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css"
+        />
+        <title>2. Entendendo o exemplo</title>
+        <style>
+            body {
+                background-color: blueviolet;
+                color: white;
+                margin: 0;
+                padding: 0;
+                font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+                max-width: 100%;
+            }
+
+            .section-header {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding-top: 10px;
+                width: 100%;
+                height: 125px;
+                border-bottom: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block {
+                background-color: rgba(6, 17, 121, 0.753);
+                position: relative;
+                margin: 0 auto;
+                width: 890px;
+                height: auto;
+                border-radius: 5px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .section-block1 {
+                position: relative;
+                margin: 0 auto;
+                width: 990px;
+                height: auto;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .section-block2 {
+                background-image: url("./../../../img/fundo.jpg");
+                position: relative;
+                margin: 0 auto;
+                width: 990px;
+                height: auto;
+                color: #fff;
+                border-radius: 5px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .section-block3 {
+                background-color: rgba(71, 61, 139, 0.774);
+                position: relative;
+                padding: 5px;
+                margin: 0 auto;
+                width: 890px;
+                height: auto;
+                border-radius: 5px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block-html {
+                background-color: #000000be;
+                position: relative;
+                margin: 0 auto;
+                width: 790px;
+                height: auto;
+                border-radius: 5px;
+                padding: 5px;
+                max-width: 100%;
+            }
+
+            .section-footer {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding: 5px;
+                width: 100%;
+                height: 155px;
+                border-top: solid 2px #fff;
+                text-align: center;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            .container-carros {
+                position: relative;
+                padding: 5px;
+                max-width: 650px;
+                margin: 0 auto;
+            }
+
+            .gallery-wrapper {
+                overflow-x: auto;
+            }
+
+            .arrow-left,
+            .arrow-right {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: auto;
+                bottom: 0;
+                font-size: 20px;
+                line-height: 350px;
+                width: 40px;
+                color: #fff;
+                transition: all 600ms ease-in-out;
+                background: linear-gradient(
+                    to left,
+                    transparent 0%,
+                    black 200%
+                );
+                opacity: 0.1;
+                cursor: pointer;
+                border: none;
+            }
+
+            .arrow-left:hover,
+            .arrow-right:hover {
+                opacity: 1;
+            }
+
+            .arrow-right {
+                right: 0;
+                left: auto;
+                text-align: right;
+                background: linear-gradient(
+                    to right,
+                    transparent 0%,
+                    black 200%
+                );
+            }
+
+            .gallery {
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 15px;
+            }
+
+            .item {
+                width: 650px;
+                height: 350px;
+                flex-shrink: 0;
+                transition: all 600ms ease-in-out;
+                opacity: 0.5;
+            }
+
+            .current-item {
+                opacity: 1;
+            }
+
+            h1,
+            h2,
+            h3 {
+                text-align: center;
+                font-weight: 100;
+                line-height: normal;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                max-width: 100%;
+            }
+
+            h4,
+            h5,
+            h6 {
+                text-align: left;
+                text-decoration: none;
+                font-weight: bold;
+                line-height: normal;
+                margin-left: 25px;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .texto-destaque-top {
+                font-weight: bold;
+                font-size: 18px;
+                color: rgb(255, 174, 0);
+                text-decoration: underline;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-html-texto {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 16px;
+                color: rgb(60, 255, 0);
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto1 {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 16px;
+                color: rgb(255, 174, 0);
+                margin-left: 65px;
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto2 {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 16px;
+                color: rgb(0, 81, 255);
+                margin-left: 60px;
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto3 {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 16px;
+                color: rgb(60, 255, 0);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-titulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(4, 83, 119, 0.74);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-rotulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-rotulo1 {
+                font-weight: bold;
+                font-size: 18px;
+                color: rgba(214, 9, 221, 0.904);
+                text-decoration: underline;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-center {
+                font-weight: 400;
+                font-size: 14px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .texto-destaque-subtitulo {
+                color: rgb(12, 12, 12);
+                max-width: 100%;
+            }
+
+            .texto-destaque-destaque {
+                color: rgb(153, 4, 4);
+                background-color: black;
+                max-width: 100%;
+            }
+
+            .texto-destaque-texto {
+                color: rgb(12, 11, 11);
+                max-width: 100%;
+            }
+
+            .texto-destaque-texto-tag {
+                color: rgb(177, 78, 12);
+                font-weight: bold;
+                font-size: 23px;
+                max-width: 100%;
+            }
+
+            p {
+                margin-left: 25px;
+                margin-right: 25px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                max-width: 100%;
+            }
+
+            a {
+                color: rgb(251, 251, 253);
+                font-size: medium;
+                max-width: 100%;
+            }
+
+            i {
+                font-size: 30px;
+                color: rgb(98, 111, 189);
+                max-width: 100%;
+            }
+
+            ol ul {
+                position: relative;
+                margin: 0 auto;
+                background-color: #0a43be8c;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                width: 750px;
+                max-width: 100%;
+                color: blueviolet;
+            }
+
+            ul {
+                position: relative;
+                margin: 0 auto;
+                background-color: #0a43be8c;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                width: 680px;
+                max-width: 100%;
+                border-right: solid 2px #fff;
+                border-bottom-right-radius: 10px;
+            }
+
+            li {
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                max-width: 100%;
+                color: rgb(241, 233, 228);
+                font-style: italic;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="section-header">
+            <h5>Você está em</h5>
+            <h4>Carreira Programador Front-end » 2ª Missão » Tags Básicas</h4>
+        </div>
+        <br />
+        <div class="section-block2">
+            <h1>2. Entendendo o exemplo</h1>
+            <div class="section-block3">
+                <p>
+                    Já entendemos a importância das tags básicas. Para
+                    aprendermos a utilizá-las vamos criar a página que pode ser
+                    vista na Animação 1.
+                </p>
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="section-block2">
+            <br />
+            <div class="section-block-html">
+                <br />
+                <center>
+                    <img
+                        src="./img/resultado.gif"
+                        alt="resultado"
+                        title="Animação 1. Página criada utilizando as tags básicas"
+                    />
+                </center>
+                <br />
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="section-block2">
+            <h3>Veja no Flow abaixo o que vamos aprender.</h3>
+            <div class="container-carros">
+                <button class="arrow-left control" aria-label="Previous image">
+                    ◀
+                </button>
+                <div class="gallery-wrapper">
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery">
+                        <img
+                            src="img/s1.png"
+                            alt="s1.png"
+                            width="675"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s2.png"
+                            alt="s2.png"
+                            width="675"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s3.png"
+                            alt="s3.png"
+                            width="675"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s4.png"
+                            alt="s4.png"
+                            width="675"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s5.png"
+                            alt="s5.png"
+                            width="675"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s6.png"
+                            alt="s6.png"
+                            width="675"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s7.png"
+                            alt="s7.png"
+                            width="675"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s8.png"
+                            alt="s8.png"
+                            width="675"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s9.png"
+                            alt="s9.png"
+                            width="675"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s10.png"
+                            alt="s10.png"
+                            width="675"
+                            height="423"
+                            class="item current-item"
+                        />
+                    </div>
+                </div>
+            </div>
+            <h3>
+                Agora que conhecemos o nosso exemplo ficará mais fácil
+                aprendermos cada tag básica.
+            </h3>
+        </div>
+        <br />
+
+        <br />
+        <script
+            src="https://kit.fontawesome.com/2930c18a2d.js"
+            crossorigin="anonymous"
+        ></script>
+        <div class="section-footer">
+            <h5 class="texto-destaque-center">
+                Envie seu Feed Back, com criticas e sugestões.
+            </h5>
+            <h5 class="texto-destaque-center">
+                Eu sou Luciano Camargo e estou iniciando minha Carreira de
+                Programador Front-End!
+            </h5>
+            <p>
+                <a href="mailto:carreiradev.frontend.lc@gmail.com">
+                    <i class="fa-regular fa-envelope"></i>
+                    CarreiraDev.FrontEnd.LC</a
+                >
+                <i class="fa-solid fa-mobile-screen"></i>
+                <a href="tel:+5521994629516">(21) 99462-9516</a>
+            </p>
+        </div>
+    </body>
+</html>
