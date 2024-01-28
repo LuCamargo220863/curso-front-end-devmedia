@@ -31,7 +31,7 @@ h4,h5,h6{
 
 p{
   text-align: left;
-  color: black;
+  color: #fff;
   font-family: cursive;
   max-width: 100%;
 }
@@ -68,7 +68,7 @@ p{
 .section-exib1 {
   position: -webkit-sticky;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.658);
+  background-color: black;
   width: 950px;
   max-width: 100%;
   
