@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="shortcut icon"
+            href="./../../../../fav.ico/favicon-96x96.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="./../../../../fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css"
+        />
+        <title>14. Inserindo as tags no projeto</title>
+        <style>
+            body {
+                background-color: blueviolet;
+                color: white;
+                margin: 0;
+                padding: 0;
+                font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+                max-width: 100%;
+            }
+
+            .section-header {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding-top: 10px;
+                width: 100%;
+                height: 125px;
+                border-bottom: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block {
+                background-color: rgba(6, 17, 121, 0.753);
+                position: relative;
+                margin: 0 auto;
+                width: 890px;
+                height: auto;
+                border-radius: 5px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .section-block1 {
+                position: relative;
+                margin: 0 auto;
+                width: 990px;
+                height: auto;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .section-block2 {
+                background-image: url("./../../../img/fundo.jpg");
+                position: relative;
+                margin: 0 auto;
+                width: 990px;
+                height: auto;
+                color: #fff;
+                border-radius: 5px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .section-block3 {
+                background-color: rgba(71, 61, 139, 0.774);
+                position: relative;
+                padding: 5px;
+                margin: 0 auto;
+                width: 890px;
+                height: auto;
+                border-radius: 5px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block-html {
+                background-color: black;
+                position: relative;
+                margin: 0 auto;
+                width: 990px;
+                height: auto;
+                border-radius: 5px;
+                padding: 5px;
+                max-width: 100%;
+            }
+
+            .section-footer {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding: 5px;
+                width: 100%;
+                height: 155px;
+                border-top: solid 2px #fff;
+                text-align: center;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            .container-carros {
+                position: relative;
+                padding: 5px;
+                max-width: 775px;
+                margin: 0 auto;
+            }
+
+            .gallery-wrapper {
+                overflow-x: auto;
+            }
+
+            .arrow-left,
+            .arrow-right {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: auto;
+                bottom: 0;
+                font-size: 20px;
+                line-height: 350px;
+                width: 40px;
+                color: #fff;
+                transition: all 600ms ease-in-out;
+                background: linear-gradient(
+                    to left,
+                    transparent 0%,
+                    black 200%
+                );
+                opacity: 0.1;
+                cursor: pointer;
+                border: none;
+            }
+
+            .arrow-left:hover,
+            .arrow-right:hover {
+                opacity: 1;
+            }
+
+            .arrow-right {
+                right: 0;
+                left: auto;
+                text-align: right;
+                background: linear-gradient(
+                    to right,
+                    transparent 0%,
+                    black 200%
+                );
+            }
+
+            .gallery {
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 15px;
+            }
+
+            .item {
+                width: 775px;
+                height: 350px;
+                flex-shrink: 0;
+                transition: all 600ms ease-in-out;
+                opacity: 0.5;
+            }
+
+            .current-item {
+                opacity: 1;
+            }
+
+            h1,
+            h2,
+            h3 {
+                text-align: center;
+                font-weight: 100;
+                line-height: normal;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                max-width: 100%;
+            }
+
+            h4,
+            h5,
+            h6 {
+                text-align: left;
+                text-decoration: none;
+                font-weight: bold;
+                line-height: normal;
+                margin-left: 25px;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .texto-destaque-top {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 24px;
+                color: rgb(255, 38, 0);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-html-texto {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 24px;
+                color: rgb(60, 255, 0);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-html-text-body {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 24px;
+                color: rgb(236, 215, 23);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-html-text-body-texto {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 24px;
+                color: rgb(170, 8, 219);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-html-texto1 {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 24px;
+                color: rgb(238, 117, 4);
+                margin-left: 65px;
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto2 {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 24px;
+                color: rgb(0, 81, 255);
+                margin-left: 65px;
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto3 {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 16px;
+                color: rgb(162, 0, 255);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-titulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(4, 83, 119, 0.74);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-rotulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-rotulo1 {
+                font-weight: bold;
+                font-size: 18px;
+                color: rgba(214, 9, 221, 0.904);
+                text-decoration: underline;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-center {
+                font-weight: 400;
+                font-size: 14px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .texto-destaque-subtitulo {
+                color: rgb(12, 12, 12);
+                max-width: 100%;
+            }
+
+            .texto-destaque-destaque {
+                color: rgb(153, 4, 4);
+                font-size: 24px;
+                max-width: 100%;
+                margin-left: 65px;
+            }
+
+            .texto-destaque-destaque-div {
+                color: rgb(153, 4, 4);
+                font-size: 26px;
+                font-weight: bold;
+                max-width: 100%;
+            }
+
+            .texto-destaque-texto {
+                color: rgb(12, 11, 11);
+                max-width: 100%;
+            }
+
+            .texto-destaque-texto-p {
+                color: rgb(4, 144, 238);
+                margin-left: 85px;
+                max-width: 100%;
+            }
+
+            .texto-destaque-texto-tag {
+                color: rgb(177, 78, 12);
+                font-weight: bold;
+                font-size: 23px;
+                max-width: 100%;
+            }
+
+            .texto-destaque-commit {
+                color: rgb(106, 122, 88);
+                font-weight: bold;
+                font-size: 13px;
+                font-style: italic;
+                font-family: cursive;
+                max-width: 100%;
+            }
+
+            p {
+                margin-left: 25px;
+                margin-right: 25px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                max-width: 100%;
+            }
+
+            a {
+                color: rgb(159, 161, 8);
+                font-size: medium;
+                font-weight: bold;
+                max-width: 100%;
+            }
+
+            i {
+                font-size: 30px;
+                color: rgb(98, 111, 189);
+                max-width: 100%;
+            }
+
+            ol ul {
+                position: relative;
+                margin: 0 auto;
+                background-color: #0a43be8c;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                width: 750px;
+                max-width: 100%;
+                color: blueviolet;
+            }
+
+            ul {
+                position: relative;
+                margin: 0 auto;
+                background-color: #0a43be8c;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                width: 680px;
+                max-width: 100%;
+                border-right: solid 2px #fff;
+                border-bottom-right-radius: 10px;
+            }
+
+            li {
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                max-width: 100%;
+                color: rgb(241, 233, 228);
+                font-style: italic;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="section-header">
+            <h5>Você está em</h5>
+            <h4>Carreira Programador Front-end » 2ª Missão » Tags Básicas</h4>
+        </div>
+        <br />
+        <div class="section-block2">
+            <h1>14. Inserindo as tags no projeto</h1>
+
+            <center>
+                <p>
+                    Falta pouco para finalizarmos nosso site como pode ser visto
+                    na Animação 1.
+                </p>
+                <h3>Animação 1. Site finalizado</h3>
+                <iframe
+                    src="./img/resultado.gif"
+                    frameborder="0"
+                    alt="resultado"
+                    width="600"
+                    height="650"
+                ></iframe>
+            </center>
+        </div>
+        <br />
+        <div class="section-block-html">
+            <center>
+                <p>
+                    O próximo passo é inserir as tags que aprendemos neste
+                    curso. <br />
+                    Para isso abra o arquivo
+                    <span class="texto-destaque-top">index.html</span> e insira
+                    o Código 1.
+                </p>
+            </center>
+            <hr />
+            <p class="texto-destaque-html-texto">&lt;!DOCTYPE html&gt;</p>
+            <p class="texto-destaque-html-texto">&lt;html lang="pt-br"&gt;</p>
+            <p class="texto-destaque-html-texto1">&lt;head&gt;></p>
+            <p class="texto-destaque-html-texto2">
+                &lt;meta charset="UTF-8"&gt;
+            </p>
+            <p class="texto-destaque-html-texto2">
+                &lt;meta name="viewport" content="width=device-width,
+                initial-scale=1.0"&gt;
+            </p>
+            <p class="texto-destaque-destaque">
+                &lt;title>Loja virtual&lt;/title&gt;
+            </p>
+            <p class="texto-destaque-html-texto1">&lt;/head&gt;</p>
+            <p class="texto-destaque-html-text-body">&lt;body&gt;</p>
+            <p class="texto-destaque-html-texto2">
+                &lt;h1&gt;Produtos em promoção&lt;/h1&gt;
+            </p>
+            <p class="texto-destaque-html-texto2">
+                &lt;h2&gt;Informática&lt;/h2&gt;
+            </p>
+
+            <p class="texto-destaque-destaque-div">&lt;div&gt;</p>
+            <p class="texto-destaque-html-texto">&lt;h3&gt;</p>
+            <p class="texto-destaque-html-text-body">
+                Notebook Lenovo Ideapad S145 8ª Intel Core I5 8GB 1TB HD 15,6"
+                W10 Prata
+            </p>
+            <p class="texto-destaque-html-texto">&lt;/h3&gt;</p>
+            <p p class="texto-destaque-html-text-body">
+                &lt;p&gt;R$ 3 500,00&lt;/p&gt;
+            </p>
+
+            <p class="texto-destaque-html-texto">
+                &lt;img src="computador.jpg" alt="Notebook Lenovo Ideapad S145"
+                title="Notebook Lenovo"&gt;
+            </p>
+
+            <p class="texto-destaque-html-texto">
+                <span class="texto-destaque-html-text-body">
+                    &lt;p&gt; Com o Notebook da Lenovo você terá um notebook de
+                    última geração, prático e veloz, com excelente capacidade de
+                    armazenamento, design inovador e exclusivo, além de você
+                    estar sempre conectado com estilo. Sua tela de 15.6"
+                    oferece</span
+                >...&lt;p&gt;
+            </p>
+
+            <p class="texto-destaque-html-texto2">
+                &lt;a href="https://lista.mercadolivre.com.br"
+                target="_blank"&gt; Comprar &lt;/a&gt;
+            </p>
+
+            <p class="texto-destaque-destaque-div">&lt;/div&gt;</p>
+
+            <p class="texto-destaque-destaque-div">&lt;div&gt;</p>
+            <p class="texto-destaque-html-text-body-texto">
+                &lt;h3&gt;Computador Desktop Completo&lt;h3&gt
+            </p>
+
+            <p class="texto-destaque-html-text-body-texto">
+                &lt;p&gt;R$ 2 500,00&lt;/p&gt;
+            </p>
+
+            <p class="texto-destaque-html-texto2">
+                &lt;img src="desktop.jpg" alt="Computador Desktop Completo"
+                title="Computador desktop"&gt; <br />
+                <span class="texto-destaque-html-text-body"
+                    >&lt;p&gt; Já vem com Monitor LED HDMI Intel Core i5 8GB HD
+                    500GB com caixas de som mouse e teclado EasyPC Standard
+                    Plus. &lt;/p&gt;</span
+                >
+            </p>
+            <p class="texto-destaque-html-texto2">
+                &lt;a href="https://lista.mercadolivre.com.br"
+                target="_blank"&gt; Comprar &lt;/a&gt;
+            </p>
+            <p class="texto-destaque-destaque-div">&lt;/div&gt;</p>
+            <p class="texto-destaque-html-text-body">&lt;/body&gt;</p>
+            <p class="texto-destaque-html-texto">&lt;/html&gt;</p>
+            <hr />
+            <h3>Código 1. Inserindo as tags que aprendemos</h3>
+        </div>
+
+        <br />
+        <div class="section-block2">
+            <h2>Entenda no Flow abaixo o que alteramos.</h2>
+            <hr />
+            <div class="container-carros">
+                <button class="arrow-left control" aria-label="Previous image">
+                    ◀
+                </button>
+                <div class="gallery-wrapper">
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery">
+                        <img
+                            src="img/s1.png"
+                            alt="s1.png"
+                            width="775"
+                            height="423"
+                            class="item current-item"
+                        />
+
+                        <img
+                            src="img/s2.png"
+                            alt="s2.png"
+                            width="775"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s3.png"
+                            alt="s3.png"
+                            width="775"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s4.png"
+                            alt="s4.png"
+                            width="775"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s5.png"
+                            alt="s5.png"
+                            width="775"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s6.png"
+                            alt="s6.png"
+                            width="775"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s7.png"
+                            alt="s7.png"
+                            width="775"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s8.png"
+                            alt="s8.png"
+                            width="775"
+                            height="423"
+                            class="item current-item"
+                        />
+                        <img
+                            src="img/s9.png"
+                            alt="s9.png"
+                            width="775"
+                            height="423"
+                            class="item current-item"
+                        />
+                    </div>
+                </div>
+                <br />
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="section-block2">
+            <h2>
+                Ao salvar as alterações nossa página terá a aparência da
+                Animação 2.
+            </h2>
+            <hr />
+            <br />
+
+            <br />
+            <center>
+                <iframe
+                    src="./img/resultado.gif"
+                    frameborder="0"
+                    width="600"
+                    height="600"
+                ></iframe>
+            </center>
+            <hr />
+            <h3>Animação 2. Página finalizada</h3>
+        </div>
+        <br />
+
+        <div class="section-block-html">
+            <h2>
+                Parabéns! Você criou uma página web e aprendeu a utilizar as
+                seguintes tags:
+            </h2>
+            <ul type="disc">
+                <li>h1 ... h6 - criar títulos</li>
+                <br />
+                <li>p - criar um parágrafo</li>
+                <br />
+                <li>a - criar um link</li>
+                <br />
+                <li>img - exibir uma imagem</li>
+                <br />
+                <li>div - agrupar elemento</li>
+            </ul>
+
+            <blockquote>
+                <center>
+                    <a
+                        href="https://www.devmedia.com.br/cursos/certificado/?id=150366"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >-Certificado-</a
+                    >
+                </center>
+            </blockquote>
+            <br />
+        </div>
+        <br />
+
+        <script
+            src="https://kit.fontawesome.com/2930c18a2d.js"
+            crossorigin="anonymous"
+        ></script>
+        <div class="section-footer">
+            <h5 class="texto-destaque-center">
+                Envie seu Feed Back, com criticas e sugestões.
+            </h5>
+            <h5 class="texto-destaque-center">
+                Sou Luciano Camargo e estou iniciando minha Carreira de
+                Programador Front-End!
+            </h5>
+            <p>
+                <a href="mailto:carreiradev.frontend.lc@gmail.com">
+                    <i class="fa-regular fa-envelope"></i>
+                    CarreiraDev.FrontEnd.LC</a
+                >
+                <i class="fa-solid fa-mobile-screen"></i>
+                <a href="tel:+5521994629516">(21) 99462-9516</a>
+            </p>
+        </div>
+    </body>
+</html>
