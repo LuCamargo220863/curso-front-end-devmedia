@@ -1,95 +1,103 @@
 body {
-  background-color: blueviolet;
-  color: white;
-  margin: 0;
-  padding: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode",
-      "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  max-width: 100%;
+    background-color: blueviolet;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    max-width: 100%;
 }
 
 .section-header {
-  position: relative;
-  margin: 0 auto;
-  background-color: rgb(5, 58, 58);
-  padding-top: 5px;
-  width: 100%;
-  height: 170px;
-  border-bottom: solid 2px #fff;
-  max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+    background-color: rgb(5, 58, 58);
+    padding-top: 5px;
+    width: 100%;
+    height: 170px;
+    border-bottom: solid 2px #fff;
+    max-width: 100%;
 }
 
 .section-block {
-  background-color: rgba(6, 17, 121, 0.753);
-  position: relative;
-  margin: 0 auto;
-  width: 1590px;
-  height: auto;
-  border-radius: 5px;
-  border-style: solid 2px #fff;
-  max-width: 100%;
-  padding: 5px;
+    background-color: rgba(6, 17, 121, 0.753);
+    position: relative;
+    margin: 0 auto;
+    width: 1590px;
+    height: auto;
+    border-radius: 5px;
+    border-style: solid 2px #fff;
+    max-width: 100%;
+    padding: 5px;
 }
 
 .section-block1 {
-  position: relative;
-  margin: 0 auto;
-  width: 1500px;
-  height: auto;
-  max-width: 100%;
-  padding: 5px;
+    position: relative;
+    margin: 0 auto;
+    width: 1500px;
+    height: auto;
+    max-width: 100%;
+    padding: 5px;
 }
 
 .section-block2 {
-  background-image: url("./fundo.jpg");
-  position: relative;
-  margin: 0 auto;
-  width: 1450px;
-  height: auto;
-  color: #fff;
-  border-radius: 5px;
-  border-style: solid 2px #fff;
-  max-width: 100%;
-  padding: 5px;
+    background-image: url("./fundo.jpg");
+    position: relative;
+    margin: 0 auto;
+    width: 1450px;
+    height: auto;
+    color: #fff;
+    border-radius: 5px;
+    border-style: solid 2px #fff;
+    max-width: 100%;
+    padding: 5px;
+}
+
+.section-block-text {
+    position: relative;
+    margin: 0 auto;
+    width: 1450px;
+    height: auto;
+    max-width: 100%;
 }
 
 .section-block3 {
-  background-color: rgba(71, 61, 139, 0.774);
-  position: relative;
-  padding: 5px;
-  margin: 0 auto;
-  width: 1050px;
-  height: auto;
-  border-radius: 5px;
-  border-style: solid 2px #fff;
-  max-width: 100%;
+    background-color: rgba(71, 61, 139, 0.774);
+    position: relative;
+    padding: 5px;
+    margin: 0 auto;
+    width: 1050px;
+    height: auto;
+    border-radius: 5px;
+    border-style: solid 2px #fff;
+    max-width: 100%;
 }
 
 .section-block-html {
-  background-color: black;
-  position: relative;
-  margin: 0 auto;
-  width: 990px;
-  height: auto;
-  border-radius: 5px;
-  padding: 5px;
-  max-width: 100%;
+    background-color: black;
+    position: relative;
+    margin: 0 auto;
+    width: 990px;
+    height: auto;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 100%;
 }
 
 .section-footer {
-  position: relative;
-  margin: 0 auto;
-  background-color: rgb(5, 58, 58);
-  padding: 5px;
-  width: 100%;
-  height: 185px;
-  border-top: solid 2px #fff;
-  text-align: center;
-  align-items: center;
-  max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+    background-color: rgb(5, 58, 58);
+    padding: 5px;
+    width: 100%;
+    height: 185px;
+    border-top: solid 2px #fff;
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
 }
 
-  .container-carros {
+.container-carros {
     position: relative;
     padding: 5px;
     width: 980px;
@@ -115,12 +123,7 @@ body {
     color: #fff;
     transition: all 600ms ease-in-out;
     max-width: 100%;
-    background: linear-gradient(
-        to left,
-        transparent 0%,
-        black 200%
-        
-    );
+    background: linear-gradient(to left, transparent 0%, black 200%);
     opacity: 0.1;
     cursor: pointer;
     border: none;
@@ -137,12 +140,7 @@ body {
     left: auto;
     text-align: right;
     max-width: 100%;
-    background: linear-gradient(
-        to right,
-        transparent 0%,
-        black 200%
-       
-    );
+    background: linear-gradient(to right, transparent 0%, black 200%);
 }
 
 .gallery {
@@ -168,216 +166,216 @@ body {
 h1,
 h2,
 h3 {
-  text-align: center;
-  font-weight: 100;
-  line-height: normal;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  max-width: 100%;
+    text-align: center;
+    font-weight: 100;
+    line-height: normal;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 100%;
 }
 
 h4,
 h5,
 h6 {
-  text-align: left;
-  text-decoration: none;
-  font-weight: bold;
-  line-height: normal;
-  margin-left: 25px;
-  max-width: 100%;
-  padding: 5px;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: normal;
+    margin-left: 25px;
+    max-width: 100%;
+    padding: 5px;
 }
 
 .texto-destaque-top {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 24px;
-  color: rgb(255, 38, 0);
-  padding: 0;
-  max-width: 100%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    color: rgb(255, 38, 0);
+    padding: 0;
+    max-width: 100%;
 }
 
 .texto-destaque-html-texto {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 24px;
-  color: rgb(60, 255, 0);
-  padding: 0;
-  max-width: 100%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    color: rgb(60, 255, 0);
+    padding: 0;
+    max-width: 100%;
 }
 
 .texto-destaque-html-text-body {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 24px;
-  color: rgb(236, 215, 23);
-  padding: 0;
-  max-width: 100%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    color: rgb(236, 215, 23);
+    padding: 0;
+    max-width: 100%;
 }
 
 .texto-destaque-html-text-body-texto {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 24px;
-  color: rgb(170, 8, 219);
-  padding: 0;
-  max-width: 100%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    color: rgb(170, 8, 219);
+    padding: 0;
+    max-width: 100%;
 }
 
 .texto-destaque-html-texto1 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 24px;
-  color: rgb(238, 117, 4);
-  margin-left: 65px;
-  padding: 0;
-  max-width: 100%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    color: rgb(238, 117, 4);
+    margin-left: 65px;
+    padding: 0;
+    max-width: 100%;
 }
 .texto-destaque-html-texto2 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 24px;
-  color: rgb(0, 81, 255);
-  margin-left: 65px;
-  padding: 0;
-  max-width: 100%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    color: rgb(0, 81, 255);
+    margin-left: 65px;
+    padding: 0;
+    max-width: 100%;
 }
 .texto-destaque-html-texto3 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 16px;
-  color: rgb(162, 0, 255);
-  padding: 0;
-  max-width: 100%;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    color: rgb(162, 0, 255);
+    padding: 0;
+    max-width: 100%;
 }
 
 .texto-destaque-titulo {
-  font-weight: 400;
-  font-size: 22px;
-  color: rgba(4, 83, 119, 0.74);
-  text-decoration: none;
-  padding: 0;
-  max-width: 100%;
+    font-weight: 400;
+    font-size: 22px;
+    color: rgba(4, 83, 119, 0.74);
+    text-decoration: none;
+    padding: 0;
+    max-width: 100%;
 }
 
 .texto-destaque-rotulo {
-  font-weight: 400;
-  font-size: 22px;
-  color: rgba(233, 231, 243, 0.904);
-  text-decoration: none;
-  padding: 0;
-  max-width: 100%;
+    font-weight: 400;
+    font-size: 22px;
+    color: rgba(233, 231, 243, 0.904);
+    text-decoration: none;
+    padding: 0;
+    max-width: 100%;
 }
 
 .texto-destaque-rotulo1 {
-  font-weight: bold;
-  font-size: 18px;
-  color: rgba(214, 9, 221, 0.904);
-  text-decoration: underline;
-  padding: 0;
-  max-width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgba(214, 9, 221, 0.904);
+    text-decoration: underline;
+    padding: 0;
+    max-width: 100%;
 }
 
 .texto-destaque-center {
-  font-weight: 400;
-  font-size: 14px;
-  color: rgba(233, 231, 243, 0.904);
-  text-decoration: none;
-  padding: 0;
-  text-align: center;
-  max-width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(233, 231, 243, 0.904);
+    text-decoration: none;
+    padding: 0;
+    text-align: center;
+    max-width: 100%;
 }
 
 .texto-destaque-subtitulo {
-  color: rgb(12, 12, 12);
-  max-width: 100%;
+    color: rgb(12, 12, 12);
+    max-width: 100%;
 }
 
 .texto-destaque-destaque {
-  color: rgb(153, 4, 4);
-  font-size: 24px;
-  max-width: 100%;
-  margin-left: 65px;
+    color: rgb(153, 4, 4);
+    font-size: 24px;
+    max-width: 100%;
+    margin-left: 65px;
 }
 
 .texto-destaque-destaque-div {
-  color: rgb(153, 4, 4);
-  font-size: 26px;
-  font-weight: bold;
-  max-width: 100%;
+    color: rgb(153, 4, 4);
+    font-size: 26px;
+    font-weight: bold;
+    max-width: 100%;
 }
 
 .texto-destaque-texto {
-  color: rgb(12, 11, 11);
-  max-width: 100%;
+    color: rgb(12, 11, 11);
+    max-width: 100%;
 }
 
 .texto-destaque-texto-p {
-  color: rgb(4, 144, 238);
-  margin-left: 85px;
-  max-width: 100%;
+    color: rgb(4, 144, 238);
+    margin-left: 85px;
+    max-width: 100%;
 }
 
 .texto-destaque-texto-tag {
-  color: rgb(177, 78, 12);
-  font-weight: bold;
-  font-size: 23px;
-  max-width: 100%;
+    color: rgb(177, 78, 12);
+    font-weight: bold;
+    font-size: 23px;
+    max-width: 100%;
 }
 
 .texto-destaque-commit {
-  color: rgb(106, 122, 88);
-  font-weight: bold;
-  font-size: 13px;
-  font-style: italic;
-  font-family: cursive;
-  max-width: 100%;
+    color: rgb(106, 122, 88);
+    font-weight: bold;
+    font-size: 13px;
+    font-style: italic;
+    font-family: cursive;
+    max-width: 100%;
 }
 
 p {
-  margin-left: 35px;
-  margin-right: 25px;
-  font-size: 22px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  max-width: 100%;
+    margin-left: 35px;
+    margin-right: 25px;
+    font-size: 22px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    max-width: 100%;
 }
 
 a {
-  color: rgb(159, 161, 8);
-  font-size: medium;
-  font-weight: bold;
-  max-width: 100%;
+    color: rgb(159, 161, 8);
+    font-size: medium;
+    font-weight: bold;
+    max-width: 100%;
 }
 
 i {
-  font-size: 30px;
-  color: rgb(98, 111, 189);
-  max-width: 100%;
+    font-size: 30px;
+    color: rgb(98, 111, 189);
+    max-width: 100%;
 }
 
 ol ul {
-  position: relative;
-  margin: 0 auto;
-  background-color: #0a43be8c;
-  padding-top: 10px;
-  padding-bottom: 15px;
-  width: 750px;
-  max-width: 100%;
-  color: blueviolet;
+    position: relative;
+    margin: 0 auto;
+    background-color: #0a43be8c;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    width: 750px;
+    max-width: 100%;
+    color: blueviolet;
 }
 
 ul {
-  position: relative;
-  margin: 0 auto;
-  background-color: #0a43be8c;
-  padding-top: 10px;
-  padding-bottom: 15px;
-  width: 680px;
-  max-width: 100%;
-  border-right: solid 2px #fff;
-  border-bottom-right-radius: 10px;
+    position: relative;
+    margin: 0 auto;
+    background-color: #0a43be8c;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    width: 680px;
+    max-width: 100%;
+    border-right: solid 2px #fff;
+    border-bottom-right-radius: 10px;
 }
 
 li {
-  position: relative;
-  margin: 0 auto;
-  width: 650px;
-  max-width: 100%;
-  color: rgb(241, 233, 228);
-  font-style: italic;
-  font-weight: bold;
- }
+    position: relative;
+    margin: 0 auto;
+    width: 650px;
+    max-width: 100%;
+    color: rgb(241, 233, 228);
+    font-style: italic;
+    font-weight: bold;
+}
