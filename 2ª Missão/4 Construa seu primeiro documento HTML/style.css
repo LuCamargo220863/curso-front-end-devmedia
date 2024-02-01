@@ -53,6 +53,16 @@ body {
     padding: 5px;
 }
 
+.section-block-text2 {
+  position: relative;
+  margin: 0 auto;
+  width: 1450px;
+  height: auto;
+  color: #fff;
+  max-width: 100%;
+  padding: 5px;
+}
+
 .section-block-text {
     position: relative;
     margin: 0 auto;
@@ -90,7 +100,7 @@ body {
     background-color: rgb(5, 58, 58);
     padding: 5px;
     width: 100%;
-    height: 185px;
+    height: 145px;
     border-top: solid 2px #fff;
     text-align: center;
     align-items: center;
