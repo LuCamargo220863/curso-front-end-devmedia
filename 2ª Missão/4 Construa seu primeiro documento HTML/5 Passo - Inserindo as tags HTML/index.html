@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="./../../../../fav.ico/favicon-96x96.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="./../../../fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css"
+        />
+        <title>5º passo: Inserindo as tags HTML</title>
+        <style>
+            body {
+                background-color: blueviolet;
+                color: white;
+                margin: 0;
+                padding: 0;
+                font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+                max-width: 100%;
+            }
+
+            .section-header {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding-top: 5px;
+                width: 100%;
+                height: 170px;
+                border-bottom: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block {
+                background-color: rgba(6, 17, 121, 0.753);
+                position: relative;
+                margin: 0 auto;
+                width: 1590px;
+                height: auto;
+                border-radius: 5px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .section-block1 {
+                position: relative;
+                margin: 0 auto;
+                width: 1500px;
+                height: auto;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .section-block2 {
+                background-image: url("./../fundo.jpg");
+                position: relative;
+                margin: 0 auto;
+                width: 1450px;
+                height: auto;
+                color: #fff;
+                border-radius: 5px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .section-block-text2 {
+                position: relative;
+                margin: 0 auto;
+                width: 1450px;
+                height: auto;
+                color: #fff;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .section-block-text {
+                position: relative;
+                margin: 0 auto;
+                width: 1450px;
+                height: auto;
+                max-width: 100%;
+            }
+
+            .section-block3 {
+                background-color: rgba(71, 61, 139, 0.774);
+                position: relative;
+                padding: 5px;
+                margin: 0 auto;
+                width: 1050px;
+                height: auto;
+                border-radius: 5px;
+                border-style: solid 2px #fff;
+                max-width: 100%;
+            }
+
+            .section-block-html {
+                background-color: black;
+                position: relative;
+                margin: 0 auto;
+                width: 990px;
+                height: auto;
+                border-radius: 5px;
+                padding: 5px;
+                max-width: 100%;
+            }
+
+            .section-footer {
+                position: relative;
+                margin: 0 auto;
+                background-color: rgb(5, 58, 58);
+                padding: 5px;
+                width: 100%;
+                height: 145px;
+                border-top: solid 2px #fff;
+                text-align: center;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            .container-carros {
+                position: relative;
+                padding: 5px;
+                width: 980px;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .gallery-wrapper {
+                overflow-x: auto;
+                max-width: 100%;
+            }
+
+            .arrow-left,
+            .arrow-right {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: auto;
+                bottom: 0;
+                font-size: 20px;
+                line-height: 500px;
+                width: 40px;
+                color: #fff;
+                transition: all 600ms ease-in-out;
+                max-width: 100%;
+                background: linear-gradient(
+                    to left,
+                    transparent 0%,
+                    black 200%
+                );
+                opacity: 0.1;
+                cursor: pointer;
+                border: none;
+            }
+
+            .arrow-left:hover,
+            .arrow-right:hover {
+                opacity: 1;
+                max-width: 100%;
+            }
+
+            .arrow-right {
+                right: 0;
+                left: auto;
+                text-align: right;
+                max-width: 100%;
+                background: linear-gradient(
+                    to right,
+                    transparent 0%,
+                    black 200%
+                );
+            }
+
+            .gallery {
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 15px;
+                max-width: 100%;
+            }
+
+            .item {
+                width: 980px;
+                height: 500px;
+                flex-shrink: 0;
+                transition: all 600ms ease-in-out;
+                opacity: 0.5;
+                max-width: 100%;
+            }
+
+            .current-item {
+                opacity: 1;
+            }
+
+            h1,
+            h2,
+            h3 {
+                text-align: center;
+                font-weight: 100;
+                line-height: normal;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                max-width: 100%;
+            }
+
+            h4,
+            h5,
+            h6 {
+                text-align: left;
+                text-decoration: none;
+                font-weight: bold;
+                line-height: normal;
+                margin-left: 25px;
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            .texto-destaque-top {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 24px;
+                color: rgb(255, 38, 0);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-html-texto {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 24px;
+                color: rgb(60, 255, 0);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-html-text-body {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 24px;
+                color: rgb(236, 215, 23);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-html-text-body-texto {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 24px;
+                color: rgb(170, 8, 219);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-html-texto1 {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 24px;
+                color: rgb(238, 117, 4);
+                margin-left: 65px;
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto2 {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 24px;
+                color: rgb(0, 81, 255);
+                margin-left: 65px;
+                padding: 0;
+                max-width: 100%;
+            }
+            .texto-destaque-html-texto3 {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 16px;
+                color: rgb(162, 0, 255);
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-titulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(4, 83, 119, 0.74);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-rotulo {
+                font-weight: 400;
+                font-size: 22px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-rotulo1 {
+                font-weight: bold;
+                font-size: 18px;
+                color: rgba(214, 9, 221, 0.904);
+                text-decoration: underline;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .texto-destaque-center {
+                font-weight: 400;
+                font-size: 14px;
+                color: rgba(233, 231, 243, 0.904);
+                text-decoration: none;
+                padding: 0;
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .texto-destaque-subtitulo {
+                color: rgb(12, 12, 12);
+                max-width: 100%;
+            }
+
+            .texto-destaque-destaque {
+                color: rgb(153, 4, 4);
+                font-size: 24px;
+                max-width: 100%;
+                margin-left: 65px;
+            }
+
+            .texto-destaque-destaque-div {
+                color: rgb(153, 4, 4);
+                font-size: 26px;
+                font-weight: bold;
+                max-width: 100%;
+            }
+
+            .texto-destaque-texto {
+                color: rgb(12, 11, 11);
+                max-width: 100%;
+            }
+
+            .texto-destaque-texto-p {
+                color: rgb(4, 144, 238);
+                margin-left: 85px;
+                max-width: 100%;
+            }
+
+            .texto-destaque-texto-tag {
+                color: rgb(177, 78, 12);
+                font-weight: bold;
+                font-size: 23px;
+                max-width: 100%;
+            }
+
+            .texto-destaque-commit {
+                color: rgb(106, 122, 88);
+                font-weight: bold;
+                font-size: 13px;
+                font-style: italic;
+                font-family: cursive;
+                max-width: 100%;
+            }
+
+            p {
+                margin-left: 35px;
+                margin-right: 25px;
+                font-size: 22px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                max-width: 100%;
+            }
+
+            a {
+                color: rgb(159, 161, 8);
+                font-size: medium;
+                font-weight: bold;
+                max-width: 100%;
+            }
+
+            i {
+                font-size: 30px;
+                color: rgb(98, 111, 189);
+                max-width: 100%;
+            }
+
+            ul {
+                position: relative;
+                margin: 0 auto;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                width: 750px;
+                max-width: 100%;
+                color: blueviolet;
+            }
+
+            ul {
+                position: relative;
+                margin: 0 auto;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                width: 680px;
+                max-width: 100%;
+            }
+
+            li {
+                position: relative;
+                margin: 0 auto;
+                width: 650px;
+                max-width: 100%;
+                color: rgb(241, 233, 228);
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            main {
+                position: relative;
+                margin: 0 auto;
+                height: 80vh;
+            }
+
+            footer {
+                text-align: center;
+                padding: 3px;
+                background-color: DarkSalmon;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="section-header">
+            <h1>
+                Projeto passo a passo:<br />Construa seu primeiro documento HTML
+            </h1>
+            <h2>4º passo: Estrutura básica do HTML</h2>
+        </div>
+        <h1>
+            Para realizar esse passo você precisa estudar e conquistar os
+            certificado abaixo
+        </h1>
+
+        <div class="section-block2">
+            <br />
+            <ul>
+                <li>
+                    <span class="texto-destaque-html-text-body"
+                        >HTML:Tags Básicas</span
+                    >
+                </li>
+            </ul>
+            <br />
+        </div>
+
+        <div class="section-block-text2">
+            <h2>O que será feito?</h2>
+            <h3>
+                Neste passo, vamos inserir na estrutura básica do arquivo HTML
+                os elementos da página, por meio do uso de tags HTML.
+            </h3>
+        </div>
+        <h3>
+            Atualmente, a página possui a aparência como apresentado na Figura
+            1.
+        </h3>
+
+        <div class="section-block2">
+            <br />
+            <center>
+                <img
+                    src="./img/fig2.jpeg"
+                    width="990"
+                    alt="fig2"
+                    title="Figura 1. Página com estrutura básica do HTML"
+                />
+            </center>
+            <br />
+            <div class="section-block-html">
+                <p>
+                    #PraCegoVer - Transcrição da Figura 1. Página sem código
+                    HTML Página em branco no navegador com o seguinte endereço:
+                    C:/Projetos/Empresa/Front-end/parque-estadual/index.html
+                </p>
+            </div>
+            <br />
+        </div>
+
+        <h3>
+            O objetivo deste passo é adicionar os elementos visuais no arquivo
+            HTML para a página ficar como a Figura 2.
+        </h3>
+
+        <div class="section-block2">
+            <br />
+            <center>
+                <img
+                    src="./img/layout-finalizado.jpeg"
+                    width="990"
+                    alt="layout-finalizado"
+                    title="Figura 2. Página com os elementos visuais"
+                />
+            </center>
+            <br />
+            <div class="section-block-html">
+                <p>
+                    ##PraCegoVer - Transcrição da Figura 2. Página com os
+                    elementos visuais Navegador com o arquivo index.html aberto.
+                    <br />Titulo no topo da página: <br />
+                    Parque Estadual Ilha Bela em letras grandes e em negrito no
+                    topo da página, abaixo da caixa de endereço do navegador.
+                    <br />
+                    Logo abaixo a foto do Parque estadual - lago com pedras
+                    grandes ao redor, rua com grandes arvores ao redor e uma
+                    pessoa parada na rua olhando pro lago. <br />
+                    Logo abaixo o subtítulo "O lugar ideal para momentos
+                    inesquecíveis" e a seguir todo o texto proposto no projeto
+                </p>
+            </div>
+            <br />
+        </div>
+        <br />
+        <h3>Para entender mais sobre este passo, acompanhe o flow a seguir:</h3>
+        <div class="section-block2">
+            <br />
+            <div class="container-carros">
+                <button class="arrow-left control" aria-label="Previous image">
+                    ◀
+                </button>
+                <div class="gallery-wrapper">
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery">
+                        <img
+                            src="./img/58.png"
+                            alt="58.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/59.png"
+                            alt="59.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/60.png"
+                            alt="60.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/61.png"
+                            alt="61.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/62.png"
+                            alt="62.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/63.png"
+                            alt="63.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/64.png"
+                            alt="64.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="section-block2">
+            <br />
+            <div class="section-block-html">
+                <p>
+                    #PraCegoVer - Transcrição do flow - Elementos visuais da
+                    página No passo anterior você criou a pasta do projeto
+                    (parque-estadual) e o arquivo HTML (index.html), além de
+                    adicionar um código base no arquivo HTML. <br />
+                    Ao fazer isso, a página do site ficou sem nenhum conteúdo.
+                    Nesse passo, vamos adicionar o código HTML que vai exibir os
+                    elementos na tela. Após adicionar o código HTML na página,
+                    ela ficará com a aparência apresentada na Figura 2. <br />
+                    Vamos inserir os elementos visuais agora porque já temos a
+                    estrutura básica da página pronta para isso - tudo ficará
+                    dentro da tag body. <br />
+                    Sem essa estrutura básica e sem o arquivo HTML não seria
+                    possível inserir os elementos HTML.
+                </p>
+            </div>
+            <br />
+        </div>
+
+        <h2>Como fazer?</h2>
+
+        <h3>
+            Antes de implementar os elementos na página, veja mais detalhes
+            sobre a imagem que será utilizada no projeto:
+        </h3>
+
+        <div class="section-block2">
+            <br />
+            <div class="container-carros">
+                <button class="arrow-left control" aria-label="Previous image">
+                    ◀
+                </button>
+                <div class="gallery-wrapper">
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery">
+                        <img
+                            src="./img/65.png"
+                            alt="65.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/66.png"
+                            alt="66.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/67.png"
+                            alt="67.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/68.png"
+                            alt="68.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="section-block2">
+            <br />
+            <div class="section-block-html">
+                <p>
+                    #PraCegoVer - Transcrição do flow - Imagem do projeto Como
+                    vimos antes, o projeto tem uma imagem que será usada na
+                    página. Essa imagem se encontra disponível para download no
+                    passo "Arquivos do projeto". Faça o download da imagem e
+                    salve a na pasta do projeto, no mesmo lugar do arquivo index
+                    ponto HTML (parque-ilha-bela.jpg).
+                </p>
+            </div>
+            <br />
+        </div>
+        <h3>
+            Veja no flow a seguir como os elementos da página foram divididos em
+            seções:
+        </h3>
+        <div class="section-block2">
+            <br />
+            <div class="container-carros">
+                <button class="arrow-left control" aria-label="Previous image">
+                    ◀
+                </button>
+                <div class="gallery-wrapper">
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery">
+                        <img
+                            src="./img/69.png"
+                            alt="69.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/70.png"
+                            alt="70.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/71.png"
+                            alt="71.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/72.png"
+                            alt="72.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/73.png"
+                            alt="73.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/74.png"
+                            alt="74.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/75.png"
+                            alt="75.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="section-block2">
+            <br />
+            <div class="section-block-html">
+                <p>
+                    #PraCegoVer - Transcrição do flow - Divisão da página em
+                    seções A página do parque está dividida em 4 pequenas
+                    seções, oferecendo assim uma estrutura mais simples e
+                    organizada. <br />
+                    A primeira seção consiste no título da página (Parque
+                    Estadual Ilha Bela), seguida da imagem, um subtítulo e um
+                    parágrafo. A segunda, terceira e quarta seções consistem no
+                    subtítulo e parágrafo, cada. <br />
+                    Cada seção deve ser delimitada por uma tag que agrupa
+                    elementos. Assim, as seções ficarão separadas entre si.
+                    <br />
+                    Qual é a estrutura básica já criada, agora vamos adicionar
+                    os elementos visuais na página, ou seja, dentro da tag body.
+                    <br />
+                    As seções de todos os elementos da página (título,
+                    subtítulos, imagem e parágrafos) devem ser inseridas dentro
+                    da tag body. <br />
+                    No flow a seguir vamos ver como inserir os elementos nessas
+                    seções.
+                </p>
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="section-block2">
+            <br />
+            <div class="container-carros">
+                <button class="arrow-left control" aria-label="Previous image">
+                    ◀
+                </button>
+                <div class="gallery-wrapper">
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery">
+                        <img
+                            src="./img/76.png"
+                            alt="76.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/77.png"
+                            alt="77.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/78.png"
+                            alt="78.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/79.png"
+                            alt="79.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/80.png"
+                            alt="80.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/81.png"
+                            alt="81.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/82.png"
+                            alt="82.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/83.png"
+                            alt="83.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/84.png"
+                            alt="84.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/85.png"
+                            alt="85.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="section-block2">
+            <br />
+            <div class="section-block-html">
+                <p>
+                    #PraCegoVer - Transcrição do flow - Inserindo elementos
+                    visuais na página Vimos que os elementos estão divididos em
+                    4 seções e agora vamos inseri-los em cada seção. seguida da
+                    imagem, um subtítulo e um parágrafo. <br />
+                    A segunda, terceira e quarta seções consistem no subtítulo e
+                    parágrafo, cada. <br />
+                    Na primeira sessão temos um título que descreve o nome do
+                    local (Parque Estadual Ilha Bela). <br />
+                    Também tem uma imagem, que exibe uma paisagem do parque
+                    (lago com pedras grandes ao redor, rua com grandes arvores
+                    ao redor e uma pessoa parada na rua olhando pro lago).
+                    <br />
+                    Um subtítulo de maior relevância foi usado na primeira seção
+                    para descrever como é o local. <br />
+                    Temos um parágrafo no final da primeira seção que dá uma
+                    breve descrição do parque. Nas seções 2, 3 e 4 temos uma
+                    estrutura muito parecida, contendo um subtítulo e um
+                    parágrafo. <br />
+                    Nessas seções temos subtítulos de menor relevância que
+                    apontam características do local. Também temos parágrafos
+                    nessas seções que descrevem o local com maiores detalhes.
+                    <br />
+                    Na quarta seção temos um link usado como um meio de contato.
+                    Esse elemento cria um link para um telefone. Quando clicado,
+                    faz uma chamada para um número.
+                </p>
+            </div>
+            <br />
+        </div>
+        <br />
+        <h3>
+            Ao terminar a implementação da tela com os textos e a imagem, sua
+            página deve ficar como no layout apresentado na Figura 3
+        </h3>
+        <h2>Inserindo elementos visuais na página</h2>
+        <div class="section-block2">
+            <br />
+            <center>
+                <img
+                    src="./img/layout-finalizado.jpeg"
+                    width="1010"
+                    alt="layout-finalizado"
+                    title="Figura 3. Layout da página finalizada"
+                />
+            </center>
+            <br />
+        </div>
+        <br />
+        <div class="section-block2">
+            <br />
+            <div class="section-block-html">
+                <p>
+                    #PraCegoVer - Transcrição da Figura 3. <br />
+                    Layout da página finalizada Titulo no topo da página: Parque
+                    Estadual Ilha Bela em letras grandes e em negrito no topo da
+                    página, abaixo da caixa de endereço do navegador. Logo
+                    abaixo a foto do Parque estadual - lago com pedras grandes
+                    ao redor, rua com grandes arvores ao redor e uma pessoa
+                    parada na rua olhando pro lago. <br />
+                    Logo abaixo o subtítulo "O lugar ideal para momentos
+                    inesquecíveis" e a seguir todo o texto proposto no projeto.
+                </p>
+            </div>
+            <br />
+        </div>
+        <br />
+        <h3>
+            Acompanhe no flow a seguir como adicionar os elementos visuais na
+            página:
+        </h3>
+
+        <div class="section-block2">
+            <br />
+            <div class="section-block-html">
+                <p class="texto-destaque-html-texto2">&lt;!DOCTYPE html&gt;</p>
+                <p class="texto-destaque-html-texto2">&lt;html&gt;</p>
+                <p class="texto-destaque-html-texto1">&lt;head&gt;</p>
+                <p class="texto-destaque-texto-p">
+                    &lt;title&gt;Página HTML&lt;/title&gt;
+                </p>
+                <p class="texto-destaque-html-texto1">&lt;/head&gt;</p>
+                <p class="texto-destaque-html-text-body-texto">&lt;body&gt;</p>
+                <p class="texto-destaque-texto-p">
+                    &lt;h1&gt;Título da página&lt;/h1&gt;
+                </p>
+                <p class="texto-destaque-texto-p">
+                    &lt;img src="img.jpg" alt="Imagem"&gt;
+                </p>
+                <p class="texto-destaque-texto-p">
+                    &lt;h2&gt;Descrição da página&lt;/h2&gt;
+                </p>
+                <p class="texto-destaque-texto-p">
+                    &lt;p&gt;Parágrafo da página&lt;/p&gt;
+                </p>
+                <p class="texto-destaque-html-text-body-texto">&lt;/body&gt;</p>
+                <p class="texto-destaque-html-texto2">&lt;/html&gt;</p>
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="section-block2">
+            <br />
+            <ul type="disc">
+                <li>
+                    Código 1
+                    <ul type="none">
+                        <li>Exemplo de código HTML</li>
+                    </ul>
+                </li>
+                <li>
+                    Checklist
+                    <ul type="none">
+                        <li>
+                            Para garantir que o Passo 5 está completo, verifique
+                            os itens abaixo:
+                            <ul>
+                                <li>
+                                    Certifique-se de ter colocado a imagem na
+                                    pasta do projeto;
+                                </li>
+                                <br />
+                                <li>
+                                    Certifique-se de ter separado a página em 4
+                                    seções;
+                                </li>
+                                <br />
+                                <li>
+                                    Certifique-se de ter criado os elementos da
+                                    página com as tags HTML correspondentes;
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <br />
+        <h3>
+            Ao seguir este checklist, você estará no caminho certo para garantir
+            que as dicas de implementação sejam aplicadas com sucesso e que seu
+            projeto alcance o resultado desejado.
+        </h3>
+        <div class="section-block2">
+            <br />
+            <div class="container-carros">
+                <button class="arrow-left control" aria-label="Previous image">
+                    ◀
+                </button>
+                <div class="gallery-wrapper">
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery">
+                        <img
+                            src="./img/86.png"
+                            alt="86.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/87.png"
+                            alt="87.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                        <img
+                            src="./img/88.png"
+                            alt="88.png"
+                            width="1090"
+                            height="550"
+                            class="item current-item"
+                        />
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="section-block2">
+            <br />
+            <div class="section-block-html">
+                <p>
+                    #PraCegoVer - Transcrição do flow - Parabéns pela evolução! <br>
+                    Você chegou até aqui e avançou mais um passo na sua carreira
+                    de programador. <br> Lembre-se, o código do seu projeto não
+                    precisa estar 100% igual ao nosso. O importante é que sua
+                    aplicação tenha o comportamento proposto na missão. <br> Você
+                    também pode comparar a nossa solução com a sua clicando em
+                    "ver solução".
+                </p>
+            </div>
+            <br />
+        </div>
+        <br />
+
+        
+
+        <script
+            src="https://kit.fontawesome.com/2930c18a2d.js"
+            crossorigin="anonymous"
+        ></script>
+        <div class="section-block-text1"></div>
+        <div class="section-footer">
+            <h5 class="texto-destaque-center">
+                Envie seu Feed Back, com criticas e sugestões.
+            </h5>
+            <h5 class="texto-destaque-center">
+                Eu sou Luciano Camargo e estou iniciando minha Carreira de
+                Programador Front-End!
+            </h5>
+            <p>
+                <a href="mailto:carreiradev.frontend.lc@gmail.com">
+                    <i class="fa-regular fa-envelope"></i>
+                    CarreiraDev.FrontEnd.LC</a
+                >
+                <i class="fa-solid fa-mobile-screen"></i>
+                <a href="tel:+5521994629516">(21) 99462-9516</a>
+            </p>
+        </div>
+    </body>
+</html>
