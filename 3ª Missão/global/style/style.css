@@ -51,6 +51,7 @@ a {
 
 p {
     margin-left: 35px;
+    margin-right: 35px;
     font-family: cursive;
     line-height: 26px;
     max-width: 100%;
@@ -74,7 +75,7 @@ p {
     width: 1990px;
     height: 155px;
     background-color: #253a44;
-    padding-bottom: 20px;
+    padding-bottom: 0%;
     border-top: solid 3px aliceblue;
     max-width: 100%;
 }
