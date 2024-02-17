@@ -16,16 +16,20 @@ h3 {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 60px;
     max-width: 100%;
 }
 h2 {
-    font-size: 26px;
+    font-size: 50px;
     max-width: 100%;
 }
 h3 {
-    font-size: 14px;
+    font-size: 40px;
     max-width: 100%;
+}
+
+h4 {
+    font-size: 35px;
 }
 
 h4,
@@ -62,7 +66,7 @@ p {
     position: relative;
     margin: 0 auto;
     width: 1990px;
-    height: 125px;
+    height: 185px;
     background-color: #253a44;
     padding: 20px 20px;
     border-bottom: solid 3px aliceblue;
