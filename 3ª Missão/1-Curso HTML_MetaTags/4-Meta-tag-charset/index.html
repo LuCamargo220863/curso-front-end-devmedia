@@ -23,34 +23,30 @@
         />
         <script src="./../../global/src/script.js" defer></script>
         <title>4. Meta tag charset</title>
-
     </head>
     <body>
         <div class="sector-header">
             <h1><strong>DEV</strong>MEDIA</h1>
-            <h4>Você está em</h4>
+            <h3>Você está em</h3>
             <br />
-            <h4>Carreira Programador Front-end » 3ª Missão » Meta tags</h4>
+            <h3>Carreira Programador Front-end » 3ª Missão » Meta tags</h3>
         </div>
-        <br />
-        <h1>4. Meta tag charset</h1>
-        <div class="sector1">
-            <br />
 
+        <h1>4. Meta tag charset</h1>
+        <div class="sector4">
             <p>
                 Para definir a descrição de uma página precisamos utilizar a tag
                 <span class="texto-destaque-top"
-                    >&lt;meta name=”description”&gt;</span
+                    >&lt;meta charset="código do charset"&gt;</span
                 >
                 dentro do cabeçalho HTML e é isso que vamos aprender nessa aula.
             </p>
-            <br />
         </div>
         <br />
         <div class="sector1">
-            <br /><br />
+            <br />
+
             <div class="sector2">
-                <br /><br />
                 <div class="container-carros">
                     <button
                         class="arrow-left control"
@@ -103,49 +99,73 @@
                                             alt="s5"
                                             class="item current-item"
                                         />
+                                        <img
+                                            src="./img/s6.png"
+                                            alt="s6"
+                                            class="item current-item"
+                                        />
+                                        <img
+                                            src="./img/s7.png"
+                                            alt="s7"
+                                            class="item current-item"
+                                        />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <br />
-                <br />
             </div>
-            <h2>No Código 1 temos o exemplo utilizado no flow anterior.</h2>
             <br />
         </div>
-        <br />
+        <div class="sector4">
+            <center>
+                <p class="texto-destaque-top">
+                    Perceba que a tag charset corrigiu o problema de acentuação
+                    na página.
+                </p>
+            </center>
+            <h4>No Código 1 temos a codificação do flow anterior.</h4>
+        </div>
 
         <div class="sector1">
             <br />
             <div class="sector7-html">
                 <br />
                 <p class="texto-destaque-top">&lt;!DOCTYPE html&gt;</p>
-                <p class="texto-destaque-top">&lt;html lang="pt-br"&gt;</p>
-                <p class="texto-destaque-top-avan">&lt;head&gt</p>
-                ;
-                <p class="texto-destaque-top-avan-ti-html">
-                    &lt;title&gt;Curso de HTML&lt;/title&gt;
+                <p class="texto-destaque-top">&lt;html&gt;</p>
+                <p class="texto-destaque-top-avan">&lt;head&gt;</p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta charset="UTF-8"&gt;
                 </p>
+
                 <p class="texto-destaque-top-avan-ti-html">
-                    &lt;meta name="description" content="Este é o curso de HTML
-                    onde você vai aprender tudo do básico ao avançado"&gt;
+                    &lt;title&gt;Página do curso de HTML&lt;/title&gt;
                 </p>
+
                 <p class="texto-destaque-top-avan">&lt;/head&gt;</p>
                 <p class="texto-destaque-top-bod">&lt;body&gt;</p>
-                <br />
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;h1&gt;Introdução&lt;/h1&gt;
+                </p>
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;p&gt;Este é o curso de HTML&lt;/p&gt;
+                </p>
                 <p class="texto-destaque-top-bod">&lt;/body&gt;</p>
                 <p class="texto-destaque-top">&lt;/html&gt;</p>
-                <br />
             </div>
-            <h5>Código 1. Curso HTML</h5>
             <br />
         </div>
+        <div class="sector4">
+            <h3>Código 1. Página do Curso HTML</h3>
+            <h2>
+                Na <strong>Figura 1</strong> podemos ver como a tag
+                <span class="texto-destaque-html-text-body-texto">charset</span>
+                é utilizada.
+            </h2>
+        </div>
         <br />
-        <h2>
-            Veja na <strong>Figura 1</strong> o uso da meta tag description.
-        </h2>
+
         <div class="sector1">
             <br />
             <center>
@@ -162,32 +182,29 @@
         <div class="sector1">
             <br />
             <blockquote>
-                As meta tags podem ou não utilizar '/' para o seu fechamento. O
-                uso mais comum é sem a '/':
+                Em alguns casos essa codificação é implícita no arquivo, com
+                isso os caracteres da página não vão quebrar mesmo que a meta
+                charset não for utilizada. Porém é recomendado que você sempre
+                utilize essa meta tag.
             </blockquote>
-            <h1>
-                <span class="texto-destaque-top"
-                    >&lt;meta name="description" content="Descrição"&gt;</span
-                >
-            </h1>
-            <blockquote>Porém também é aceito o uso de '/':</blockquote>
-            <h1>
-                <span class="texto-destaque-top"
-                    >&lt;meta name="description" content="Descrição"&gt;</span
-                >
-            </h1>
+
             <br />
         </div>
         <br />
         <div class="sector4">
             <h1>Exemplo prático</h1>
+
             <p>
                 A meta tag
-                <span class="texto-destaque-html">description</span> é utilizada
-                por buscadores na hora de exibir o resultado da busca. <br />
+                <span class="texto-destaque-html">charset</span> é utilizada
+                para definir o conjunto de caracteres de uma página, e por vezes
+                resolve problemas como a exibição incorreta de caracteres.
+                <br />
                 Veja nesse exemplo da
                 <span class="texto-destaque-html">Figura 2</span> como o
-                buscador exibe a description no seu resultado.
+                buscador exibe a
+                <span class="texto-destaque-html">charset</span> corrige a
+                exibição de caracteres acentuados.
             </p>
         </div>
         <div class="sector1">
@@ -197,8 +214,12 @@
                     src="./img/fig2.png"
                     width="850"
                     alt="fig2"
-                    title="Figura 2. Exemplo do uso de description"
+                    title="Figura 2. Tag charset em ação"
                 />
+                <p>
+                    No Código 2 você pode ver o código utilizado no flow
+                    anterior.
+                </p>
             </center>
             <br />
         </div>
@@ -209,41 +230,31 @@
                 <br />
                 <p class="texto-destaque-top">&lt;!DOCTYPE html&gt;</p>
                 <p class="texto-destaque-top">&lt;html lang="pt-br"&gt;</p>
-                <p class="texto-destaque-top-avan">&lt;head&gt</p>
-                ;
+                <p class="texto-destaque-top-avan">&lt;head&gt;</p>
                 <p class="texto-destaque-top-avan-ti-html">
-                    &lt;title&gt;DevMedia | Plataforma para
-                    Programadores&lt;/title&gt;
-                </p>
-                <p class="texto-destaque-top-avan-ti-html">
-                    &lt;meta name="description" content="São milhares de Cursos,
-                    DevCasts, Códigos e Artigos sobre Java, JavaScript, PHP,
-                    Delphi, Banco de dados, HTML, CSS, C#, C++, Python e .NET.
-                    Acesse agora!"&gt;
+                    &lt;title&gt;Certificado de conclusão&lt;/title&gt;
                 </p>
                 <p class="texto-destaque-top-avan">&lt;/head&gt;</p>
                 <p class="texto-destaque-top-bod">&lt;body&gt;</p>
                 <br />
+                <p>&lt;h1&gt;Conclusão de curso&lt;/h1&gt;</p>
+                <p>&lt;p&gt;Você completou o curso de HTML&lt;/p&gt;</p>
                 <p class="texto-destaque-top-bod">&lt;/body&gt;</p>
                 <p class="texto-destaque-top">&lt;/html&gt;</p>
                 <br />
             </div>
-            <h5>Código 2. Utilizando a tag description</h5>
+            <center><p>Código 2. Uso da meta charset</p></center>
             <br />
         </div>
         <br />
 
         <main></main>
-        <div class="sector1">
+        <div class="sector4">
             <br />
             <center>
                 <p>
-                    Apesar de não ser vista pelo usuário, a tag
-                    <span class="texto-destaque-html"
-                        >&lt;meta name=”description”&gt;</span
-                    >
-                    é muito importante para buscadores e por isso devemos saber
-                    utilizá-la corretamente
+                    A tag meta charset é muito útil para definir o conjunto de
+                    caracteres da página, evitando problemas de acentuação
                 </p>
             </center>
             <br />
