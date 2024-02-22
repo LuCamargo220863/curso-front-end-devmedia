@@ -170,7 +170,7 @@ p {
 }
 
 .gallery-wrapper {
-    overflow-x: auto;
+    overflow-x: scroll;
     max-width: 100%;
 }
 
@@ -182,7 +182,7 @@ p {
     right: auto;
     bottom: 0;
     font-size: 20px;
-    line-height: 365px;
+    line-height: 405px;
     width: 40px;
     color: #fff;
     transition: all 600ms ease-in-out;
@@ -216,7 +216,7 @@ p {
 
 .item {
     width: 680px;
-    height: 365px;
+    height: 405px;
     flex-shrink: 0;
     transition: all 600ms ease-in-out;
     opacity: 0.5;
