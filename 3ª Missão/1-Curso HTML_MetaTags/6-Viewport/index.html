@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta
+            name="description"
+            content="Este projeto tem por finalidade replicar as aulas do curso @DEVMEDIA, com style proprio do autor"
+        />
+        <meta charset="UTF-8" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./../../global/style/style.css" />
+        <link
+            rel="stylesheet"
+            href="./../../../fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./../../global/img/favicon-96x96.png"
+            type="image/x-icon"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto"
+            rel="stylesheet"
+        />
+        <script src="./../../global/src/script.js" defer></script>
+        <title>6. Viewport</title>
+    </head>
+    <body>
+        <div class="sector-header">
+            <h1><strong>DEV</strong>MEDIA</h1>
+            <h3>Você está em</h3>
+            <br />
+            <h3>Carreira Programador Front-end » 3ª Missão » Meta tags</h3>
+        </div>
+
+        <div class="sector4">
+            <h1>6. Viewport</h1>
+            <p>
+                Para configurar a exibição correta da página em múltiplos
+                tamanhos de tela, precisamos utilizar a tag
+                <span class="texto-destaque-top"
+                    >&lt;meta name="viewport"&gt;</span
+                >dentro do cabeçalho HTML e é isso que vamos aprender nessa
+                aula.
+            </p>
+        </div>
+        <br />
+        <div class="sector1">
+            <br />
+
+            <div class="sector2">
+                <div class="container-carros">
+                    <button
+                        class="arrow-left control"
+                        aria-label="Previous image"
+                    >
+                        ◀
+                    </button>
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery-wrapper">
+                        <div class="gallery">
+                            <img
+                                src="./img/s1.png"
+                                alt="s1"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s2.png"
+                                alt="s2"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s3.png"
+                                alt="s3"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s4.png"
+                                alt="s4"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s5.png"
+                                alt="s5"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s6.png"
+                                alt="s6"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s7.png"
+                                alt="s7"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s8.png"
+                                alt="s8"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s8.png"
+                                alt="s8"
+                                class="item current-item"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4>
+                Perceba que a
+                <span class="texto-destaque-html-3"
+                    >meta tag
+                    <span class="texto-destaque-top">viewport </span></span
+                >
+                fez com que a página fosse exibida corretamente.
+            </h4>
+            <br />
+        </div>
+
+        <div class="sector1">
+            <h4>Veja no Código 1 a codificação utilizada no flow anterior.</h4>
+
+            <div class="sector7-html">
+                <br />
+                <p class="texto-destaque-top">&lt;!DOCTYPE html&gt;</p>
+                <p class="texto-destaque-top">&lt;html&gt;</p>
+                <p class="texto-destaque-top-avan">&lt;head&gt;</p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta name="description" content="Comentários" /&gt;
+                </p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta charset="UTF-8" /&gt;
+                </p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta name="robots" content="noindex, nofollow" /&gt;
+                </p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta name="viewport" content="width=device-width,
+                    initial-scale=1" /&gt;
+                </p>
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;title&gt;Comentários&lt;/title&gt;
+                </p>
+
+                <p class="texto-destaque-top-avan">&lt;/head&gt;</p>
+                <p class="texto-destaque-top-bod">&lt;body&gt;</p>
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;h1&gt;Comentários&lt;/h1&gt;
+                </p>
+                <p>&lt;div&gt;</p>
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;p&gt;Venha conhecer meu site. É bem legal.<span
+                        class="texto-destaque-top"
+                        >&lt;a href="https://www.meusite.com.br"&gt;<br />https://www.meusite.com.br&lt;/a&gt;</span
+                    >&lt;/p&gt;
+                </p>
+                <p>&lt;/div&gt;</p>
+                <p class="texto-destaque-top-bod">&lt;/body&gt;</p>
+                <p class="texto-destaque-top">&lt;/html&gt;</p>
+            </div>
+            <br />
+            <h3>Código 1. Uso do Viewport</h3>
+        </div>
+        <br />
+        <div class="sector1">
+            <div class="sector4">
+                <h2>
+                    Veja na Figura 1 todos os exemplos de uso que vimos nessa
+                    aula.
+                </h2>
+                <br />
+                <center>
+                    <img
+                        src="./img/fig1.png"
+                        width="850"
+                        alt="fig1"
+                        title="Figura 1. Entendendo a meta tag viewport"
+                    />
+                </center>
+                <br />
+            </div>
+            <br />
+        </div>
+        <div class="sector4">
+            <h2>Exemplo prático</h2>
+            <p>
+                No nosso exemplo prático vamos ver a diferença entre uma página
+                HTML renderizada com e sem o uso da meta tag
+                <span class="texto-destaque-top">viewport</span>, mostrando como
+                o uso dessa tag pode alterar significativamente a renderização
+                da página.
+            </p>
+        </div>
+        <div class="sector1">
+            <div class="sector4">
+                <h2>
+                    Veja na Figura 2 um exemplo comparativo do uso da viewport.
+                </h2>
+                <br />
+                <center>
+                    <img
+                        src="./img/fig2.png"
+                        width="850"
+                        alt="fig2"
+                        title="Figura 2. Entendendo a meta tag viewport"
+                    />
+                </center>
+                <br />
+            </div>
+            <br />
+        </div>
+        <br />
+
+        <div class="sector1">
+            <h4>Veja no Código 2 o exemplo prático.</h4>
+
+            <div class="sector7-html">
+                <p class="texto-destaque-top">&lt;!DOCTYPE html&gt;</p>
+                <p class="texto-destaque-top">&lt;html&gt;</p>
+                <p class="texto-destaque-top-avan">&lt;head&gt;</p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta charset="UTF-8" /&gt;
+                </p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta name="robots" content="noindex, nofollow" /&gt;
+                </p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta name="viewport" content="width=device-width,
+                    initial-scale=1" /&gt;
+                </p>
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;title&gt;Fórum&lt;/title&gt;
+                </p>
+
+                <p class="texto-destaque-top-avan">&lt;/head&gt;</p>
+                <p class="texto-destaque-top-bod">&lt;body&gt;</p>
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;h1&gt;Fórum&lt;/h1&gt;
+                </p>
+                <p>&lt;h3&gt;If/else vs Switch/Case&lt;/h3&gt;</p>
+                <p>&lt;div&gt;</p>
+                <p>
+                    &lt;b&gt;Marcos: &lt;/b&gt;&lt;p&gt;Depende de cada caso, eu
+                    uso os dois&lt;/p&gt;
+                </p>
+                <p>&lt;/div&gt;</p>
+
+                <p>&lt;div&gt;</p>
+                <p>
+                    &lt;b&gt;Augusto: &lt;/b&gt;&lt;p&gt;Não sei, o Switch /
+                    case parece mais organizado pra mim.&lt;/p&gt;
+                </p>
+                <p>&lt;/div&gt;</p>
+
+                <p>&lt;div&gt;</p>
+                <p>
+                    &lt;b&gt;Camila: &lt;/b&gt;&lt;p&gt;Eu prefiro if/else, é
+                    mais simples e serve na maioria das situações&lt;/p&gt;
+                </p>
+                <p>&lt;/div&gt;</p>
+                <p class="texto-destaque-top-bod">&lt;/body&gt;</p>
+                <p class="texto-destaque-top">&lt;/html&gt;</p>
+            </div>
+            <br />
+            <h3>Código 2. Exemplo prático</h3>
+        </div>
+        <br />
+
+        <br />
+        <div class="sector1">
+            <br />
+            <blockquote>
+                Através da meta tag viewport podemos garantir que a exibição da
+                nossa página será a melhor possível independentemente do tamanho
+                da tela em que ela está sendo exibida
+            </blockquote><br>
+        </div>
+        <br>
+
+        <script
+            src="https://kit.fontawesome.com/2930c18a2d.js"
+            crossorigin="anonymous"
+        ></script>
+        <div class="sector-footer">
+            <center>
+                <a
+                    href="https://github.com/LuCamargo220863"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa-brands fa-github"></i> Meu GitHub: Luciano
+                    Camargo</a
+                >
+                <br /><br />
+                <a href="mailto:carreiradev.frontend.lc@gmail.com"
+                    ><i class="fa-regular fa-envelope"></i>
+                    carreiradev.frontend.lc@gmail.com</a
+                >
+                <br /><br />
+                <a href="tel:+5521994629516"
+                    ><i class="fa-solid fa-mobile-screen"></i> (21)99462-9516</a
+                >
+            </center>
+        </div>
+    </body>
+</html>
