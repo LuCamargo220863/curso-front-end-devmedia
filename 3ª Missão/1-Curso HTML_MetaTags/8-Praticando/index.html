@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta
+            name="description"
+            content="Este projeto tem por finalidade replicar as aulas do curso @DEVMEDIA, com style proprio do autor"
+        />
+        <meta charset="UTF-8" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./../../global/style/style.css" />
+        <link
+            rel="stylesheet"
+            href="./../../../fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./../../global/img/favicon-96x96.png"
+            type="image/x-icon"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto"
+            rel="stylesheet"
+        />
+        <script src="./../../global/src/script.js"></script>
+        <title>8. Praticando</title>
+    </head>
+    <body>
+        <div class="sector-header">
+            <h1><strong>DEV</strong>MEDIA</h1>
+            <h3>Você está em</h3>
+            <br />
+            <h3>Carreira Programador Front-end » 3ª Missão » Meta tags</h3>
+        </div>
+
+        <div class="sector4">
+            <h1>8. Praticando</h1>
+            <p>
+                Agora que já sabemos como utilizar as tags de cabeçalho, vamos
+                construir um exemplo. <br />
+                Nele vamos exibir uma página HTML que mostra o nome dos alunos
+                aprovados e reprovados, como mostra a Figura 1.
+            </p>
+        </div>
+        <div class="sector1">
+            <div class="sector4">
+                <h2>
+                    Veja na Figura 2 um exemplo comparativo do uso da viewport.
+                </h2>
+                <br />
+                <center>
+                    <img
+                        src="./img/fig1.png"
+                        width="550"
+                        height="800"
+                        alt="fig1"
+                        title="Figura 1.Página HTML"
+                    />
+                </center>
+                <br />
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="sector4">
+            <p>
+                Todas as tags de cabeçalho vistas neste curso foram utilizadas,
+                com exceção da tag <span class="texto-destaque-top">link</span>,
+                já que utilizamos a tag
+                <span class="texto-destaque-top">style</span> para o
+                <span class="texto-destaque-top">CSS</span>. Acompanhe o flow
+                abaixo para compreender o conteúdo do exemplo:
+            </p>
+        </div>
+        <div class="sector1">
+            <br />
+
+            <div class="sector2">
+                <div class="container-carros">
+                    <button
+                        class="arrow-left control"
+                        aria-label="Previous image"
+                    >
+                        ◀
+                    </button>
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery-wrapper">
+                        <div class="gallery">
+                            <img
+                                src="./img/s1.png"
+                                alt="s1"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s2.png"
+                                alt="s2"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s3.png"
+                                alt="s3"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s4.png"
+                                alt="s4"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s5.png"
+                                alt="s5"
+                                class="item current-item"
+                            />
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <br />
+
+        <div class="sector4">
+            <h2>
+                Agora é a hora de mexer no código. Para isso crie um arquivo HTML e insira o <span class="text-dest-fund-black-orange">Código 1</span>.
+            </h2>
+        </div>
+        <div class="sector1">
+            <br />
+
+            <div class="sector7-html">
+                <p class="texto-destaque-top">&lt;!DOCTYPE html&gt;</p>
+                <p class="texto-destaque-top">&lt;html&gt;</p>
+                <p class="texto-destaque-top-avan">&lt;head&gt;</p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta charset="UTF-8"&gt;
+                </p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta name="robots" content="noindex"&gt;
+                </p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta name="description" content="Lista de aprovação"&gt;
+                </p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta name="viewport" content="width=device-width,
+                    initial-scale=1.0"&gt;
+                </p>
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;title&gt;Resultado dos alunos&lt;/title&gt;
+                </p>
+                <p class="texto-destaque-top-bod">&lt;style&gt;</p>
+                <p class="texto-destaque-top">span { color: <span class="text-dest-fund-black-green">#02af3b</span>; }</p>
+                <br />
+                <p class="texto-destaque-top">p { color: <span class="text-dest-fund-black-red">#ce0909</span>; }</p>
+                <br />
+                <p class="texto-destaque-top-bod">&lt;/style&gt;</p>
+                <p class="texto-destaque-top-avan">&lt;/head&gt;</p>
+
+                <p class="texto-destaque-top-bod">&lt;body&gt;</p>
+
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;h1&gt;Resultados dos alunos&lt;/h1&gt;
+                </p>
+                <p>&lt;h3&gt;Aprovados&lt;/h3&gt;</p>
+
+                <p class="texto-destaque-top">&lt;div&gt;</p>
+
+                <p class="texto-destaque-top-bod">
+                    &lt;p&gt;&lt;span&gt;Marcus&lt;/span&gt;&lt;/p&gt;
+                </p>
+                <p class="texto-destaque-top-bod">
+                    &lt;p&gt;&lt;span&gt;Camila&lt;/span&gt;&lt;/p&gt;
+                </p>
+                <p class="texto-destaque-top-bod">
+                    &lt;p&gt;&lt;span&gt;Fred&lt;/span&gt;&lt;/p&gt;
+                </p>
+                <p class="texto-destaque-top-bod">
+                    &lt;p&gt;&lt;span&gt;Julia&lt;/span&gt;&lt;/p&gt;
+                </p>
+
+                <p class="texto-destaque-top">&lt;/div&gt;</p>
+
+                <p>&lt;h3&gt;Reprovados&lt;/h3&gt;</p>
+
+                <p class="texto-destaque-top">&lt;div&gt;</p>
+
+                <p class="texto-destaque-titulo">&lt;p&gt;Tamires;&lt;/p&gt;</p>
+                <p class="texto-destaque-titulo">&lt;p&gt;Paulo&lt;/p&gt;</p>
+                <p class="texto-destaque-titulo">&lt;p&gt;;César&lt;/p&gt;</p>
+                <p class="texto-destaque-titulo">&lt;p&gt;Gabriela&lt;/p&gt;</p>
+
+                <p class="texto-destaque-top">&lt;/div&gt;</p>
+
+                <p class="texto-destaque-top-bod">&lt;/body&gt;</p>
+                <p class="texto-destaque-top">&lt;/html&gt;</p>
+                <br />
+            </div>
+            <br />
+        </div>
+
+        <div class="sector4">
+            <h2>Código 1. Exemplo alunos aprovados e reprovados</h2>
+            <h1>Entendendo o código do exemplo</h1>
+            <p>Para que a página que criamos tenha as características que desejamos, precisamos utilizar as seguintes tags de cabeçalho:</p>
+            <ul>
+              <li>Title</li>
+              <li>Meta tag Description</li>
+              <li>Meta tag Charset</li>
+              <li>Meta tag Noindex</li>
+              <li>Meta tag Viewport</li>
+              <li>Style</li>
+            </ul>
+        </div>
+
+        <br />
+        
+        <div class="sector4">
+            <h2>No flow abaixo vamos entender o código:</h2>
+        
+        </div>
+        <div class="sector1">
+            <br />
+
+            <div class="sector2">
+                <div class="container-carros">
+                    <button
+                        class="arrow-left control"
+                        aria-label="Previous image"
+                    >
+                        ◀
+                    </button>
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery-wrapper">
+                        <div class="gallery">
+                            <img
+                                src="./img/s6.png"
+                                alt="s6"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s7.png"
+                                alt="s7"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s8.png"
+                                alt="s8"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s9.png"
+                                alt="s9"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s010.png"
+                                alt="s010"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s011.png"
+                                alt="s011"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s012.png"
+                                alt="s012"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s013.png"
+                                alt="s013"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s014.png"
+                                alt="s014"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s015.png"
+                                alt="s015"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s016.png"
+                                alt="s016"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s017.png"
+                                alt="s017"
+                                class="item current-item"
+                            />
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="sector4">
+            <h2>Qual o próximo passo?</h2>
+            <p>Agora que você já sabe como utilizar as tags de cabeçalho, o próximo passo pode ser visto no flow abaixo:</p>
+        </div>
+        <br>
+        <div class="sector1">
+            <br />
+
+            <div class="sector2">
+                <div class="container-carros">
+                    <button
+                        class="arrow-left control"
+                        aria-label="Previous image"
+                    >
+                        ◀
+                    </button>
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery-wrapper">
+                        <div class="gallery">
+                            <img
+                                src="./img/s018.png"
+                                alt="s018"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s019.png"
+                                alt="s019"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s020.png"
+                                alt="s020"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s021.png"
+                                alt="s020"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s022.png"
+                                alt="s022"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/s023.png"
+                                alt="s023"
+                                class="item current-item"
+                            />
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="sector4">
+            <br />
+            <blockquote>
+                Parabéns! Você aprendeu a utilizar as tags de cabeçalho em HTML. Durante o curso você aprendeu a utilizá-las para definir características de um documento HTML, desde a definição do título da página até o uso de CSS
+            </blockquote>
+            <br />
+        </div>
+        
+
+        <script
+            src="https://kit.fontawesome.com/2930c18a2d.js"
+            crossorigin="anonymous"
+        ></script>
+        <div class="sector-footer">
+            <center>
+                <a
+                    href="https://github.com/LuCamargo220863"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa-brands fa-github"></i> Meu GitHub: Luciano
+                    Camargo</a
+                >
+                <br /><br />
+                <a href="mailto:carreiradev.frontend.lc@gmail.com"
+                    ><i class="fa-regular fa-envelope"></i>
+                    carreiradev.frontend.lc@gmail.com</a
+                >
+                <br /><br />
+                <a href="tel:+5521994629516"
+                    ><i class="fa-solid fa-mobile-screen"></i> (21)99462-9516</a
+                >
+            </center>
+        </div>
+    </body>
+</html>
