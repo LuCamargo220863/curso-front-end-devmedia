@@ -385,6 +385,14 @@ p {
     font-weight: bold;
 }
 
+.text-dest-fund-black-red-subl{
+    color: #000;
+    background-color: #ce0909;
+    text-decoration: underline;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+}
 blockquote {
     background-image: url('./../../global/img/fundo.jpg');
     background-repeat: no-repeat;
