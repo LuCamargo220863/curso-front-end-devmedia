@@ -1,0 +1,247 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif;}
+.seletor{ -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+body{background: #1F4F66;background-image: url("https://www.devmedia.com.br/carreira/certificado/img/fundo.png");min-height: 100vh;display: flex;align-items: center;justify-content: center;background-attachment: fixed;background-size: contain;flex-direction: column;}
+.box-certificado{box-sizing: border-box;margin: 10px 20px;/* margin-top: 10px; */background-color: white;width: 1058px;min-height: 65vh;border-radius: 10px;box-shadow: 0 15px 35px 0 rgba(10, 197, 212, 0.16);padding: 30px 60px 30px;display: flex;flex-direction: column;position: relative;}
+.badge{ width: 50%;}
+.logos {display: flex; flex-direction: column-reverse; align-items: center; gap: 15px; }
+.logo{flex: 0 0 auto;margin-left: 15px;}
+.logo-b2b {width: 200px;}
+.logo-b2b.rio-inclui {width: 70px;}
+.col1{width: 37%;display: flex;flex-wrap: wrap;flex-direction: column;/* align-items: center; */justify-content: center;}
+.col1-info{max-width: 200px;display: flex;flex-direction: column;align-items: center;text-align: center;}
+.col2{width: 63%;display: flex;flex-wrap: wrap;align-content:space-between;padding-right: 20px;}
+h1 {
+    margin-top: 16px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.14;
+    color: black;
+}
+
+h2 {
+    margin-top: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.14;
+    color: rgb(78, 78, 78);
+}
+
+h3 {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.14;
+    color: rgb(78, 78, 78);
+}
+
+h4 {
+    margin-top: 16px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.14;
+    color: black;
+}
+h6 { margin-top: 14px; font-size: 90%; font-weight: 500; line-height: 1.27; color: rgb(174, 174, 174);}
+h5{margin-top: 30px;font-size: 100%;font-weight: 600;line-height: 1.18;color: rgb(78, 78, 78);}
+p{ margin-top: 16px; opacity: 0.6; font-size: 105%; font-weight: 500; line-height: 1.5; color: rgb(0, 0, 0);}
+.box-certificado .col2-info div {margin-top: 16px;opacity: 0.6;font-size: 16px;font-weight: 500;line-height: 1.5;color: rgb(0, 0, 0);white-space: pre-wrap;}
+.col1-badge {max-width: 200px;margin-bottom: 30px;display: flex;justify-content: center;}
+.col1-badge svg .rect-number-badge, .text-number-badge { display: none;}
+.col1-badge #Badges { transform: translate(-60px, -80px) scale(1.15);}
+.block-url {text-align: left;font-size: 12px;display: flex;flex-direction: column;font-weight: 500;color: rgb(0 0 0 / .6);flex: 1 1 auto;width: 100%;line-break: anywhere;}
+
+.metrica {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.6);
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+}
+
+.metrica-item {
+    background-color: white;
+    margin: 0;
+    display: inline-flex;
+    flex-direction: row;
+    border-radius: 5px;
+    padding: 10px 5px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.metrica-titulo {
+    font-weight: 500;
+    line-height: 14px;
+    flex: 1 1 auto;
+}
+
+.metrica-titulo br {
+    display: none;
+}
+
+.metrica-valor {
+    font-size: 18px;
+    font-weight: 700;
+    color: #3cb7dc;
+    margin-right: 10px;
+    line-height: 14px;
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.col1-badge svg {
+    max-width: 170px;
+    width: 100%;
+}
+
+i.div-itens {
+	height: 14px;
+	width: 2px;
+	background: #1f4f66;
+	display: inline-block;
+	margin: 0px 5px -2px;
+}
+
+.area-info {
+	display: flex;
+	flex: 1 1 auto;
+	flex-wrap: wrap;
+}
+
+.area-logo {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+a.linkedin-share-certificate-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.box-certificado .col2-info .competencias {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+@media (max-width: 1100px) {
+	.box-certificado{width: 95%;height: 65%;}
+}
+
+@media(max-height: 873px){
+	.box-certificado{min-height: 570px;}
+}
+
+@media (max-width: 900px) {
+	.box-certificado{ display: flex; flex-direction:column; width: 95%; height: auto; padding: 50px;}
+	.col1{width: 100%;align-items: center;display: flex;flex-wrap: nowrap;align-content:space-between;}
+	.col1-info{width: 100%;margin: 0 8%;max-height: 80%;max-width: none;}
+	.badge{ width: 25%; margin-bottom: 15px;}
+	.col2{width: 100%;margin: auto;padding-right: unset;}
+	.col2-info { width: 100%; margin-top: 10%;}
+	.logo{margin-top: 10%;}
+
+	.metrica {
+		flex-wrap: wrap;
+	}
+
+	.metrica-titulo br {
+		display: none;
+	}
+}
+
+@media (max-width: 570px) {
+	.box-certificado{ display: flex; flex-direction:column; width: 95%; height: auto; padding: 50px;}
+	.box-certificado{display: flex;flex-direction:column;width: 100%;height: auto;padding: 5%;border-radius: unset;box-shadow: unset;margin: 0;position: static;}
+	body{align-items: center;background-color: white;background-image: unset;position: relative;}
+	.col1{ width: 90%; align-items: center; display: flex; flex-wrap: wrap; align-content:space-between; margin: auto;}
+	.col1-info{width: 100%;margin-left: 0%;max-height: 80%;margin: auto;margin-top: 10px;}
+	.badge{ width: 25%; margin-bottom: 15px; margin: auto;}
+	.col2{ width: 100%; margin: auto;}
+	.col2-info {width: 100%;margin-top: 20px;}
+	.logo{ margin-top: 49%; margin: auto; margin-top: 48px;}
+	h3, h6, h5, p{ text-align: center;}
+	.col1-badge {width: 35%;margin:auto;}
+	.box-certificado .col2-info div {text-align: center;}
+	.area-logo {flex-direction: column-reverse;}
+
+	.block-url {
+		text-align: center;
+		margin: 20px 10px 0;
+		width: auto;
+	}
+
+	a.linkedin-share-certificate-btn {
+		position: static;
+		margin: 0 auto 20px;
+	}
+
+	h2 {
+		font-size: 18px;
+		text-align: center;
+	}
+
+	.metrica {
+		font-size: 16px;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.metrica-titulo {
+		font-size: 16px;
+	}
+
+	.metrica-item {
+		flex: 1 0 auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	h3 {
+		font-size: 16px;
+	}
+
+	.box-certificado .col2-info .competencias {
+		font-size: 14px;
+	}
+	.metrica-valor {
+		min-width: auto;
+	}
+}
+
+@media (max-width: 454px) {
+	body{/* align-items: unset; */background-color: white;background-image: unset;}
+	.box-certificado{display: flex;flex-direction:column;width: 100%;height: auto;padding: 5%;border-radius: unset;box-shadow: unset;}
+	.col1{width: 90%;align-items: center;display: flex;flex-wrap: wrap;align-content: center;}
+	.col1-info{ width: 90%; max-height: 80%;}
+	.badge{ width: 92px; margin-bottom: 15px;}
+	.col2{ width: 100%; margin: auto;}
+	.col2-info {width: 100%;margin-top: 10%;}
+	.logo{margin: auto;margin-top: 30px;margin-bottom: 0;width: 130px;}
+}
+
+/*CSS para impressão*/
+@media print {
+	.linkedin-share-certificate-btn{display:none;}
+	.box-certificado {border: 2px solid #1F4F66; padding: 30px 60px 30px;min-height: 670px; max-width: calc(100vw - 20px); width:1058px; margin: 10px;border-radius: 10px; box-shadow:none; }
+	.area-info { flex-direction: row; flex-wrap: nowrap;}
+	.area-info .col1 { width: auto; flex: 0 0 auto;}
+	.area-info .col2 { width: auto; flex: 1 1 auto; padding: 0 20px 0 40px;}
+	.area-info .col2-info { margin: 0;}
+	.area-logo .logo { margin: 0 0 0 15px;}
+	h1, h2, h3, h6, h5, p { text-align: left;}
+	.box-certificado .col2-info div {text-align: left;}
+	.col1-badge {width: auto;}
+	.metrica { align-items: flex-start;}
+	.block-url {width: 100%;text-align: left;}
+}
