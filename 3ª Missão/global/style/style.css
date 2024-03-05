@@ -385,6 +385,12 @@ p {
     font-weight: bold;
 }
 
+.text-dest-fund-black-blue{
+    color: rgb(243, 243, 250);
+    background-color: #061df0;
+    font-weight: bold;
+}
+
 .text-dest-fund-black-red-subl{
     color: #000;
     background-color: #ce0909;
