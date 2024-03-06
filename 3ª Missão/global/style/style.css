@@ -257,7 +257,7 @@ p {
     margin-left: 95px;
     font-weight: bold;
     font-size: 20px;
-    color: rgb(165, 11, 212);
+    color: rgb(240, 60, 6);
     text-decoration: none;
     padding: 0;
     max-width: 100%;
@@ -329,6 +329,16 @@ p {
     max-width: 100%;
 }
 
+.texto-destaque-html-sty1 {
+    color: rgb(36, 241, 8);
+    margin-left: 90px;
+    font-size: 20px;
+    line-height: 24px;
+    font-style: italic;
+    text-align: left;
+    max-width: 100%;
+}
+
 .texto-destaque-html-2 {
     color: rgb(207, 210, 30);
     margin-left: 100px;
@@ -370,6 +380,12 @@ p {
 .text-dest-fund-black-orange{
     color: #000;
     background-color: #ff7300;
+    font-weight: bold;
+}
+
+.text-dest-fund-black-yellow{
+    color: #000;
+    background-color: yellow;
     font-weight: bold;
 }
 
