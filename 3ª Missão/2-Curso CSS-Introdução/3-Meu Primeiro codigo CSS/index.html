@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta
+            name="description"
+            content="Este projeto tem por finalidade replicar as aulas do curso @DEVMEDIA, com style proprio do autor"
+        />
+        <meta charset="UTF-8" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./../../global/style/style.css" />
+        <link
+            rel="stylesheet"
+            href="./../../../fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./../../global/img/favicon-96x96.png"
+            type="image/x-icon"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto"
+            rel="stylesheet"
+        />
+        <script src="./../../global/src/script.js"></script>
+        <title>3. Meu primeiro código CSS</title>
+    </head>
+    <body>
+        <div class="sector-header">
+            <h1><strong>DEV</strong>MEDIA</h1>
+            <h3>Você está em</h3>
+            <br />
+            <h3>Carreira Programador Front-end » 3ª Missão » Introdução</h3>
+        </div>
+
+        <div class="sector4">
+            <h1>3. Meu primeiro código CSS</h1>
+            <p>
+                Agora que vimos como é a sintaxe de um código CSS e como é
+                importante implementá-la corretamente, veremos como o código CSS
+                é usado em uma página HTML:
+            </p>
+        </div>
+
+        <div class="sector1">
+            <br />
+
+            <div class="sector2">
+                <div class="container-carros">
+                    <button
+                        class="arrow-left control"
+                        aria-label="Previous image"
+                    >
+                        ◀
+                    </button>
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery-wrapper">
+                        <div class="gallery">
+                            <img
+                                src="./img/01.png"
+                                alt="01"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/02.png"
+                                alt="02"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/03.png"
+                                alt="03"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/04.png"
+                                alt="04"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/05.png"
+                                alt="05"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/06.png"
+                                alt="06"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/07.png"
+                                alt="07"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/08.png"
+                                alt="08"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/09.png"
+                                alt="09"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/010.png"
+                                alt="010"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/011.png"
+                                alt="011"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/012.png"
+                                alt="012"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/013.png"
+                                alt="013"
+                                class="item current-item"
+                            />
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <br />
+
+        <div class="sector4">
+            <h1>
+                No
+                <span class="text-dest-fund-black-orange">Código 1</span> vemos
+                os códigos que foram usados no flow.
+            </h1>
+        </div>
+        <br />
+        <div class="sector4">
+            <h2>
+                Código 1. <br />
+                Código HTML com CSS incorporado no head
+            </h2>
+        </div>
+        <div class="sector1">
+            <br />
+
+            <div class="sector7-html">
+                <br />
+                <p class="texto-destaque-top">&lt;!DOCTYPE html&gt;</p>
+                <p class="texto-destaque-top">&lt;html&gt;</p>
+                <p class="texto-destaque-top-avan">&lt;head&gt;</p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta charset="UTF-8"&gt;
+                </p>
+
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;title&gt;Estrutura CSS&lt;/title&gt;
+                </p>
+                <p class="texto-destaque-top">&lt;style&gt;</p>
+                <p class="texto-destaque-top-avan">h1 {</p>
+                <p class="texto-destaque-html-sty1">font-size: 48px;</p>
+                <p class="texto-destaque-html-sty1">color: blue;</p>
+                <p class="texto-destaque-top-avan">}</p>
+                <br />
+
+                <p class="texto-destaque-top-avan">p {</p>
+                <p class="texto-destaque-html-sty1">font-size: 20px;</p>
+
+                <p class="texto-destaque-top-avan">}</p>
+                <br />
+                <p class="texto-destaque-top">&lt;/style&gt;</p>
+
+                <p class="texto-destaque-top-avan">&lt;/head&gt;</p>
+
+                <p class="texto-destaque-top-bod">&lt;body&gt;</p>
+
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;h1&gt;Introdução ao CSS&lt;/h1&gt;
+                </p>
+
+                <p class="texto-destaque-top-bod">
+                    &lt;p&gt;Aprenda o que é o CSS e como ele funciona. Comece a
+                    criar os seus primeiros estilos formatando elementos de
+                    texto. O CSS é uma linguagem fundamental para quem quer
+                    trabalhar com desenvolvimento web. Abaixo você tem o ponto
+                    de partida para o seu aprendizado&lt;/p&gt;
+                </p>
+
+                <p class="texto-destaque-top-bod">&lt;/body&gt;</p>
+                <p class="texto-destaque-top">&lt;/html&gt;</p>
+                <br />
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="sector4">
+            <blockquote>
+                Cada propriedade no CSS nos permite alterar uma característica
+                de um elemento no HTML. Podemos ver na Figura 1 a propriedade
+                <span class="text-dest-fund-black-cinza">font-size</span>, que altera o tamanho da fonte de um elemento de
+                texto.
+            </blockquote>
+        </div>
+        <br />
+        <div class="sector1">
+            <br />
+            <center>
+                <img
+                    src="./img/fig1.png"
+                    width="950"
+                    alt="fig1"
+                    title="Figura 1. Exemplos de valores diferentes na propriedade color
+                  "
+                />
+            </center>
+            <br />
+        </div>
+        <br />
+        <div class="sector4">
+            <blockquote>
+                Um código CSS deve estar com a sintaxe correta e também ficar
+                dentro da tag style para que os estilos sejam aplicados de forma
+                correta
+            </blockquote>
+        </div>
+        <br />
+        <div class="sector4">
+            <h2>No flow a seguir veremos mais um exemplo:</h2>
+        </div>
+        <br />
+        <div class="sector1">
+            <br />
+
+            <div class="sector2">
+                <div class="container-carros">
+                    <button
+                        class="arrow-left control"
+                        aria-label="Previous image"
+                    >
+                        ◀
+                    </button>
+                    <button class="arrow-right control" aria-label="Next Image">
+                        ▶
+                    </button>
+                    <div class="gallery-wrapper">
+                        <div class="gallery">
+                            <img
+                                src="./img/014.png"
+                                alt="014"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/015.png"
+                                alt="015"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/016.png"
+                                alt="016"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/017.png"
+                                alt="017"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/018.png"
+                                alt="018"
+                                class="item current-item"
+                            />
+                            <img
+                                src="./img/019.png"
+                                alt="019"
+                                class="item current-item"
+                            />
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <br />
+        <div class="sector4">
+            <h2>No Código 2 temos o código que foi utilizado no flow mais completa.</h2>
+            <br>
+            <br>
+            <h3>A seguir temos a execução do código:</h3>
+        </div>
+        <br>
+        <div class="sector1">
+            <br />
+
+            <div class="sector7-html">
+                <br />
+                <p class="texto-destaque-top">&lt;!DOCTYPE html&gt;</p>
+                <p class="texto-destaque-top">&lt;html&gt;</p>
+                <p class="texto-destaque-top-avan">&lt;head&gt;</p>
+                <p class="texto-destaque-top-avan">
+                    &lt;meta charset="UTF-8"&gt;
+                </p>
+
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;title&gt;Estrutura CSS&lt;/title&gt;
+                </p>
+                <p class="texto-destaque-top">&lt;style&gt;</p>
+                <p class="texto-destaque-top-avan">h1 {</p>
+                <p class="texto-destaque-html-sty1">font-size: 48px;</p>
+                <p class="texto-destaque-html-sty1">color: blue;</p>
+                <p class="texto-destaque-top-avan">}</p>
+                <br />
+
+                <p class="texto-destaque-top-avan">p {</p>
+                <p class="texto-destaque-html-sty1">font-size: 20px;</p>
+                <p class="texto-destaque-html-sty1">background-color: <span class="text-dest-fund-black-yellow">yellow</span>;</p>
+
+                <p class="texto-destaque-top-avan">}</p>
+                <br />
+                <p class="texto-destaque-top">&lt;/style&gt;</p>
+
+                <p class="texto-destaque-top-avan">&lt;/head&gt;</p>
+
+                <p class="texto-destaque-top-bod">&lt;body&gt;</p>
+
+                <p class="texto-destaque-top-avan-ti-html">
+                    &lt;h1&gt;Introdução ao CSS&lt;/h1&gt;
+                </p>
+
+                <p class="texto-destaque-top-bod">
+                    &lt;p&gt;Aprenda o que é o CSS e como ele funciona. Comece a
+                    criar os seus primeiros estilos formatando elementos de
+                    texto. O CSS é uma linguagem fundamental para quem quer
+                    trabalhar com desenvolvimento web. Abaixo você tem o ponto
+                    de partida para o seu aprendizado&lt;/p&gt;
+                </p>
+
+                <p class="texto-destaque-top-bod">&lt;/body&gt;</p>
+                <p class="texto-destaque-top">&lt;/html&gt;</p>
+                <br />
+            </div>
+            <br />
+        </div>
+        <br />
+
+        <div class="sector4">
+            <h2>A seguir temos a execução do código:</h2>
+        </div>
+        <div class="sector1">
+
+            <br />
+            <center>
+                <iframe height="300" width="880"; scrolling="no" title="" src="https://codepen.io/diego-souza-the-styleful/embed/MWmLVoY?default-tab=html%2Cresult&amp;editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/diego-souza-the-styleful/pen/MWmLVoY">
+                    </a> by Diego Souza (<a href="https://codepen.io/diego-souza-the-styleful">@diego-souza-the-styleful</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
+            </center>
+            <br />
+        </div>
+        <br />
+        <div class="sector4">
+            <br />
+            <blockquote>
+                As propriedades font-size e color normalmente são aplicadas em textos como foram vistos os exemplos das tags h1 (título) e p (parágrafo). Quando essas propriedades são usadas em outros elementos, seus estilos são aplicados nos textos que estiverem dentro desses elementos
+            </blockquote>
+
+            <br />
+      
+        <br />
+
+        <script
+            src="https://kit.fontawesome.com/2930c18a2d.js"
+            crossorigin="anonymous"
+        ></script>
+        <div class="sector-footer">
+            <center>
+                <a
+                    href="https://github.com/LuCamargo220863"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa-brands fa-github"></i> Meu GitHub: Luciano
+                    Camargo</a
+                >
+                <br /><br />
+                <a href="mailto:carreiradev.frontend.lc@gmail.com"
+                    ><i class="fa-regular fa-envelope"></i>
+                    carreiradev.frontend.lc@gmail.com</a
+                >
+                <br /><br />
+                <a href="tel:+5521994629516"
+                    ><i class="fa-solid fa-mobile-screen"></i> (21)99462-9516</a
+                >
+            </center>
+        </div>
+    </body>
+</html>
