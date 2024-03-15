@@ -21,11 +21,9 @@ h1 {
     max-width: 100%;
 }
 h2 {
-    
     max-width: 100%;
 }
 h3 {
-    
     max-width: 100%;
 }
 
@@ -45,13 +43,15 @@ h6 {
     max-width: 100%;
 }
 
-
 a {
-    color: aliceblue;
+    color: rgb(27, 4, 236);
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
     font-size: 20px;
     max-width: 100%;
+    background-color: #b8b8b8;
+    font-style: italic;
+    font-weight: bold;
 }
 
 p {
@@ -66,8 +66,6 @@ p {
     max-width: 100%;
 }
 
-
-
 .sector-header {
     position: relative;
     margin: 0 auto;
@@ -76,7 +74,7 @@ p {
     background-color: #253a44;
     padding: 20px 20px;
     border-bottom: solid 3px aliceblue;
-    max-width: 100%;    
+    max-width: 100%;
 }
 
 .sector-footer {
@@ -170,7 +168,6 @@ p {
     margin: 0 auto;
     max-height: 50%;
     min-width: 50%;
-    border-radius: 3%;
     box-sizing: border-box;
 }
 
@@ -178,7 +175,6 @@ p {
     overflow-x: scroll;
     max-height: 50%;
     min-width: 50%;
-    border-radius: 3%;
 }
 
 .arrow-left,
@@ -220,7 +216,6 @@ p {
     gap: 15px;
     max-height: 50%;
     min-width: 50%;
-    border-radius: 3%;
 }
 
 .item {
@@ -231,11 +226,10 @@ p {
     opacity: 0.5;
     max-height: 50%;
     min-width: 50%;
-    border-radius: 3%;
 }
 
 .current-item {
-    opacity: 1
+    opacity: 1;
 }
 
 .texto-destaque-top {
@@ -330,7 +324,7 @@ p {
     font-style: italic;
     text-align: left;
     max-width: 100%;
-}
+    }
 
 .texto-destaque-html-sty1 {
     color: rgb(36, 241, 8);
@@ -352,6 +346,18 @@ p {
     max-width: 100%;
 }
 
+.texto-destaque-html-link {
+    color: rgb(48, 240, 10);
+    margin-left: 100px;
+    font-size: 20px;
+    line-height: 24px;
+    font-style: italic;
+    text-align: left;
+    max-width: 100%;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .texto-destaque-html-3 {
     color: rgb(119, 209, 236);
     font-size: 20px;
@@ -368,67 +374,67 @@ p {
     max-width: 100%;
 }
 
-.text-dest-fund-black-cinza{
+.text-dest-fund-black-cinza {
     color: #000;
     background-color: #b8b8b8;
     font-weight: bold;
 }
 
-.text-dest-fund-black-green{
+.text-dest-fund-black-green {
     color: #000;
     background-color: #02af3b;
     font-weight: bold;
 }
 
-.text-dest-fund-black-green1{
+.text-dest-fund-black-green1 {
     color: #fff;
     background-color: #02af3b;
     font-weight: bold;
 }
 
-.text-dest-fund-black-orange{
+.text-dest-fund-black-orange {
     color: #000;
     background-color: #ff7300;
     font-weight: bold;
 }
 
-.text-dest-fund-black-yellow{
+.text-dest-fund-black-yellow {
     color: #000;
     background-color: yellow;
     font-weight: bold;
 }
 
-.text-dest-fund-black-blueclair{
+.text-dest-fund-black-blueclair {
     color: #000;
     background-color: #6694eb;
     font-weight: bold;
 }
 
-.text-dest-fund-black-red{
+.text-dest-fund-black-red {
     color: #000;
     background-color: #ce0909;
     font-weight: bold;
 }
 
-.text-dest-fund-black-red1{
+.text-dest-fund-black-red1 {
     color: #fff;
     background-color: #ce0909;
     font-weight: bold;
 }
 
-.text-dest-fund-black-blue{
+.text-dest-fund-black-blue {
     color: rgb(243, 243, 250);
     background-color: #061df0;
     font-weight: bold;
 }
 
-.text-dest-fund-black-blue1{
+.text-dest-fund-black-blue1 {
     color: #fff;
     background-color: #061df0;
     font-weight: bold;
 }
 
-.text-dest-fund-black-red-subl{
+.text-dest-fund-black-red-subl {
     color: #000;
     background-color: #ce0909;
     text-decoration: underline;
@@ -437,7 +443,7 @@ p {
     font-weight: bold;
 }
 blockquote {
-    background-image: url('./../../global/img/fundo.jpg');
+    background-image: url("./../../global/img/fundo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
@@ -465,7 +471,8 @@ ol {
     box-shadow: 10px 10px 5px 2px #7119c4ab;
 }
 
-ul, li {
+ul,
+li {
     color: rgb(7, 6, 6);
     margin: 15px;
     font-size: 30px;
@@ -484,7 +491,6 @@ i {
     max-width: 100%;
 }
 
-br{
-    
+br {
     line-height: 2px;
 }
